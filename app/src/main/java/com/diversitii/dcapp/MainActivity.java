@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         doFirebaseAuth();
     }
 
@@ -105,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnCats).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                update_flag_cats = false;
                 showLoading();
                 mStorageRef = FirebaseStorage.getInstance().getReference();
 
@@ -116,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnPacks).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                update_flag_pack = false;
                 showLoading();
 
                 JSONArray json = getFile("packs" + mFileExtension);
@@ -126,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnTopics).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                update_flag_topic = false;
                 showLoading();
 
                 JSONArray json = getFile("topics" + mFileExtension);
@@ -136,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnQuestions).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                update_flag_question = false;
                 showLoading();
 
                 JSONArray json = getFile("questions" + mFileExtension);
@@ -146,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnAnswers).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                update_flag_answer = false;
                 showLoading();
 
                 JSONArray json = getFile("answers" + mFileExtension);
@@ -159,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnPSubtopics).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                update_flag_subtop = false;
                 showLoading();
 
                 JSONArray json = getFile("subtopics" + mFileExtension);
