@@ -1,0 +1,430 @@
+TopicId,Answers,AnswerId
+4518,Taco Bell,1
+4518,Wendy's,2
+4518,Subway,3
+4518,Pye ,4
+4518,Creda ,5
+4518,Heinz Big Soup ,6
+4519,Swan Vesta ,1
+4519,Benson & Hedges,2
+4519,Nicorette,3
+4519,Kellogg's Special K ,4
+4519,Milky Bars,5
+4519,Nicorette,6
+4520,Xerox,1
+4520,UHU,2
+4520,Yellow Pages ,3
+4520,Bran Flakes,4
+4520,Wembley Ties,5
+4520,"Playtex, Cross Your Heart ",6
+4521,Pears’ Soap,1
+4521,Sure ,2
+4521,Wilkinson Sword,3
+4521,Wilkinson Sword,4
+4521,Taco Bell,5
+4521,McVities Homewheat,6
+4522,Volkswagen ,1
+4522,Jeep,2
+4522,Dodge,3
+4522,Pittsburgh Garters ,4
+4522,Adola ,5
+4522,Persil,6
+4523,J&B Scotch,1
+4523,Seagram's 7 Crown ,2
+4523,Dewar’s Scotch Whisky ,3
+4523,Fresh Cream Cakes ,4
+4523,Flash,5
+4523,Findus ,6
+4524,Lipton’s,1
+4524,P.G. Tips,2
+4524,Typhoo,3
+4524,Oldsmobile,4
+4524,Cabbage Patch Dolls,5
+4524,Shell ,6
+4525,Packard ,1
+4525,Oldsmobile,2
+4525,Edsel,3
+4525,R&K Originals ,4
+4525,Lipton’s,5
+4525,Xerox,6
+4526,Westminster Socks,1
+4526,Jockey Shorts,2
+4526,Mohara Suits,3
+4526,Wheaties ,4
+4526,Fruit of the Loom,5
+4526,Dilly Beans,6
+4527,Old Gold,1
+4527,Benson & Hedges ,2
+4527,Marlboro ,3
+4527,A-1 sauce,4
+4527,Hacks ,5
+4527,Heinz Beans,6
+4528,Allen's Foot Ease,1
+4528,Start-Rite Shoes ,2
+4528,Kiwi Shoe Polish ,3
+4528,Utica,4
+4528,Crawford's Cheddars,5
+4528,Michelob,6
+4529,Levi’s,1
+4529,Sears Roebuck,2
+4529,Adola ,3
+4529,Danone,4
+4529,Jeep,5
+4529,Lyle’s Golden Syrup ,6
+4530,Utica,1
+4530,Carling's Ale ,2
+4530,William Gratz ,3
+4530,Kiwi Shoe Polish ,4
+4530,ICI,5
+4530,Old Gold,6
+4531,A-1 sauce,1
+4531,Lea & Perrin's ,2
+4531,Burma Sauce,3
+4531,Chevrolet,4
+4531,Jockey Shorts,5
+4531,Bromo-Seltzer ,6
+4532,Sprite ,1
+4532,Welch,2
+4532,Canada Dry ,3
+4532,Hoover Vacuum Cleaner,4
+4532,Tunes ,5
+4532,Typhoo,6
+4533,Pittsburgh Garters ,1
+4533,Postman's,2
+4533,B F Spencer,3
+4533,Seagram's 7 Crown ,4
+4533,Kellogg's,5
+4533,Ryvita,6
+4534,Wheaties ,1
+4534,Bran Flakes,2
+4534,Kellogg's,3
+4534,Marlboro ,4
+4534,B F Spencer,5
+4534,Yellow Pages ,6
+4535,Smarties ,1
+4535,Cracker Jack ,2
+4535,Milky Bars,3
+4535,Tefal,4
+4535,Volkswagen,5
+4535,UHU,6
+4536,Maggi's,1
+4536,Campbell's,2
+4536,Heinz Big Soup ,3
+4536,J&B Scotch,4
+4536,Kraft,5
+4536,Sprite ,6
+4537,Ryvita,1
+4537, Sego,2
+4537,Kellogg's Special K ,3
+4537,Maggi's,4
+4537,Rich Tea,5
+4537,Vauxhall ,6
+4538,Sodastream,1
+4538,Tefal,2
+4538,Hoover Vacuum Cleaner,3
+4538,Fisher Price ,4
+4538,Marcus Valley Pickles,5
+4538,Kellogg's Super Noodles ,6
+4539,Fairy Liquid,1
+4539,Flash,2
+4539,Persil,3
+4539,Allen's Foot Ease,4
+4539,Sure ,5
+4539,Dewar’s Scotch Whisky ,6
+4540,Heinz Beans,1
+4540,Findus ,2
+4540,Kellogg's Super Noodles ,3
+4540,Benson & Hedges,4
+4540,Edsel,5
+4540,Benson & Hedges ,6
+4541,Shell ,1
+4541,ICI,2
+4541,General Electric,3
+4541,Jell-O Gelatin Dessert,4
+4541,Cracker Jack ,5
+4541,Postman's,6
+4542,Harp,1
+4542,Colt 45,2
+4542,Michelob,3
+4542,Knirps,4
+4542,William Gratz ,5
+4542,Carling's Ale ,6
+4543,Wembley Ties,1
+4543,London Fog,2
+4543,Knirps,3
+4543,Volkswagen ,4
+4543,Meccano ,5
+4543,General Electric,6
+4544,Fresh Cream Cakes ,1
+4544,Jell-O Gelatin Dessert,2
+4544,Mr Kipling,3
+4544,Canada Dry ,4
+4544,Colt 45,5
+4544,Campbell's,6
+4545,Kraft,1
+4545,Lyle’s Golden Syrup ,2
+4545,Danone,3
+4545,Sodastream,4
+4545,Packard ,5
+4545,Lea & Perrin's ,6
+4546,Rich Tea,1
+4546,Crawford's Cheddars,2
+4546,McVities Homewheat,3
+4546,Harp,4
+4546,Sears Roebuck,5
+4546,Mr Kipling,6
+4547,Vlasic,1
+4547,Marcus Valley Pickles,2
+4547,Dilly Beans,3
+4547,Dodge,4
+4547,Burma Sauce,5
+4547,Welch,6
+4548,Meccano ,1
+4548,Fisher Price ,2
+4548,Cabbage Patch Dolls,3
+4548,Indesit Omeag ,4
+4548,Westminster Socks,5
+4548,Smarties ,6
+4549,Chevrolet,1
+4549,Volkswagen,2
+4549,Vauxhall ,3
+4549,Levi’s,4
+4549,London Fog,5
+4549,Wendy's,6
+4550,Pye ,1
+4550,Indesit Omeag ,2
+4550,Creda ,3
+4550,Mohara Suits,4
+4550, Sego,5
+4550,Subway,6
+4551,Hacks ,1
+4551,Bromo-Seltzer ,2
+4551,Tunes ,3
+4551,Pears’ Soap,4
+4551,Vlasic,5
+4551,Fairy Liquid,6
+4552,"Playtex, Cross Your Heart ",1
+4552,R&K Originals ,2
+4552,Fruit of the Loom,3
+4552,Start-Rite Shoes ,4
+4552,P.G. Tips,5
+4552,Swan Vesta ,6
+3654,Ulysses. James Joyce,1
+3654,"To The Lighthouse, Virginia Woolf    ",2
+3654,"Lord Jim, Joseph Conrad",3
+3654,,4
+3654,"The Handmaid's Tale, Margaret Atwood",5
+3654,,6
+3655,A Tale of Two Cities,1
+3655,Little Dorrit ,2
+3655,Hard Times ,3
+3655,,4
+3655,Oliver Twist ,5
+3655,,6
+3656,The Sun Also Rises ,1
+3656,A Farewell To Arms ,2
+3656,The Old Man and the Sea,3
+3656,,4
+3656,For Whom the Bell Tolls,5
+3656,,6
+3657,"Brighton Rock, Graham Green ",1
+3657,"The Da Vinci Code, Dan Brown ",2
+3657,"Rebecca, Daphne du Maurier",3
+3657,,4
+3657,"The Andromeda Strain, Michael Crichton",5
+3657,,6
+3658,"Squids Will Be Squids,  Jon Scieszka",1
+3658,Grimm’s Fairy Tales,2
+3658,"The Thief of Always, Clive Barker",3
+3658,,4
+3658,"The Lion & the Mouse, Jerry Pinkney",5
+3658,,6
+3659,Anna Karenina,1
+3659,The Cossacks ,2
+3659,War and Peace ,3
+3659,,4
+3659,The Death of Ivan Ilych,5
+3659,,6
+3660,Pride and Prejudice,1
+3660,Northanger Abbey,2
+3660,Persuassion,3
+3660,,4
+3660,Sense and Sensibility,5
+3660,,6
+3661,"Peter Pan, JM Barrie",1
+3661,"Charlotte’s Web, E.B. White",2
+3661,Matilda,3
+3661,,4
+3661,"A Series of Unfortunate Events, Lemony Snicket",5
+3661,,6
+3662,"The Bell Jar, Sylvia Plath",1
+3662,"The Moon and Sixpence, W. Somerset Maugham",2
+3662,"Animal Farm, George Orwell",3
+3662,,4
+3662,"A Scanner Darkly
+Novel, Philip K. Dick",5
+3662,,6
+3663,"Moby-Dick, Herman Melville",1
+3663,"The Call of the Wild, Jack London",2
+3663,"Tom Sawyer, Mark Twain",3
+3663,,4
+3663,"Huckleberry Finn, Mark Twain",5
+3663,,6
+3664,"The Hitchhiker’s Guide to the Galaxy, Douglas Adams",1
+3664,"The Time Travellers Wife , Audrey Niffenegger",2
+3664,"2001 - A Space Odyssey, Arthur C. Clarke.",3
+3664,,4
+3664,"The Time Machine, H. G. Wells.",5
+3664,,6
+3665,"The Metamorphosis and Other Stories, Franz Kafka",1
+3665,"The Invisible Man , H. G. Wells",2
+3665,"1984, George Orwell",3
+3665,,4
+3665,"The Martian Chronicles, Ray Bradbury",5
+3665,,6
+3666,Harry Potter and the Philosopher's Stone,1
+3666,Harry Potter and the Prisoner of Azkaban,2
+3666,Harry Potter and the Half-Blood Prince,3
+3666,,4
+3666,Harry Potter and the Order of the Phoenix,5
+3666,,6
+3667,"The Lord of the Rings, J.R.R. Tolkein",1
+3667,"Game of Thrones, George R. R. Martin.",2
+3667,"Sourcery, Terry Pratchett.",3
+3667,,4
+3667,"Through the Looking Glass, Lewis Carroll.",5
+3667,,6
+3668,"Frankenstein, Mary Shelley",1
+3668,"A Certain Slant of Light, Laura Whitcomb",2
+3668,"The Exorcist, William Peter Blatty",3
+3668,,4
+3668,"The Shining, Stephen King ",5
+3668,,6
+3669,"Villette, Charlotte Bronte",1
+3669,"Jane Eyre, Charlotte Bronte.",2
+3669,"Wuthering Heights, Emily Brontë",3
+3669,,4
+3669,"Agnes Grey, Anne Bronte",5
+3669,,6
+3670,"Little Women, Louisa May Alcott",1
+3670,"Middlemarch, George Elliot",2
+3670,"Vanity Fair, William Makepeace Thackeray",3
+3670,,4
+3670,"Les Miserables, Victor Hugo",5
+3670,,6
+3671,The Great Gatsby,1
+3671,This Side of Paradise,2
+3671,Tender is the Night,3
+3671,,4
+3671,The Beautiful and the Damned,5
+3671,,6
+3672,"Scaramouche, Raphael Sabatini",1
+3672,"The Count of Monte Cristo,  Alexandre Dumas",2
+3672,The Prisoner of Zenda,3
+3672,,4
+3672,"The Scarlet Pimpernel, Emmuska Orczy",5
+3672,,6
+3673,"Cat's Eye, Margaret Atwood",1
+3673,Love in the Time of Cholera,2
+3673,"Snow Country, Yasunari Kawabata",3
+3673,,4
+3673,"Kidnapped, David Balfour",5
+3673,,6
+3674,"The Big Sleep, Raymond Chandler",1
+3674,Dirk Gently's Holistic Detective Agency,2
+3674,"The Maltese Falcon, Dashiell Hammett.",3
+3674,,4
+3674,"And Then There Were None, Agatha Christie",5
+3674,,6
+3675,"All the Pretty Horses, Cormac McCarthy",1
+3675,"The Sound and the Fury, William Faulkner
+",2
+3675,"Where the Heart Is, Billie Letts",3
+3675,,4
+3675,"The Big Sleep, Raymond Chandler",5
+3675,,6
+3676,"Life of Pi, Yann Martel",1
+3676,"The Wind in the Willows, Kenneth Grahame.",2
+3676,"Watership Down , Richard Adams",3
+3676,,4
+3676,"The Crow Road, Iain Banks",5
+3676,,6
+3677,Twelfth Night,1
+3677,Richard III,2
+3677,Romeo and Juliet,3
+3677,,4
+3677,The Merchant of Venice ,5
+3677,,6
+3678,"A Clockwork Orange, Anthony Burgess",1
+3678,"Brave New World, Aldous Huxley",2
+3678,"The Maze Runner, James Dashner
+",3
+3678,,4
+3678,"Divergent, Veronica Roth",5
+3678,,6
+3679,"Age of Innocence, Edith Wharton",1
+3679,"The Color Purple, Alice Walker",2
+3679,"The Grapes of Wrath, John Steinbeck",3
+3679,,4
+3679,"The Sympathizer, Viet Thanh Nguyen.",5
+3679,,6
+3680,Harry Potter and the Order of the Phoenix,1
+3680,Harry Potter and the Deathly Hallows,2
+3680,Harry Potter and the Chamber of Secrets,3
+3680,,4
+3680,Harry Potter and the Prisoner of Azkaban,5
+3680,,6
+3681,"Where the Heart Is, Billie Letts",1
+3681,"The Crow Road, Iain Banks",2
+3681,"The Picture of Dorian grey, Oscar Wilde",3
+3681,,4
+3681,"A Series of Unfortunate Events, Lemony Snicket",5
+3681,,6
+3682,"A Series of Unfortunate Events, Lemony Snicket",1
+3682,"The House At Pooh Corner, A.A. Milne
+
+",2
+3682,"Where the Wild Things Are, Maurice Sendak",3
+3682,,4
+3682,"The Picture of Dorian grey, Oscar Wilde",5
+3682,,6
+3683,"Rebecca, Daphne du Maurier",1
+3683,"The Godfather, Mario Puzo",2
+3683,"The Dain Curse, Dashiell Hammett",3
+3683,,4
+3683,"Catch 22, Joseph Heller",5
+3683,,6
+3684,"Captain Corelli's Mandolin, Louis de Bernieres",1
+3684,"Catch 22, Joseph Heller",2
+3684,"Sarah's Key, Tatiana de Rosnay",3
+3684,,4
+3684,"Where the Wild Things Are, Maurice Sendak",5
+3684,,6
+3685,"Slaughterhouse-Five, Kurt Vonnegut",1
+3685,"The Time Traveler's Wife, Audrey Niffenegger",2
+3685,,3
+3685,,4
+3685,"The Blind Assassin, Margaret Atwood",5
+3685,,6
+3686,"The Blind Assassin, Margaret Atwood",1
+3686,"Memoirs of a Geisha, Arthur Golden
+
+",2
+3686,"The Book Thief, Markus Zusak",3
+3686,,4
+3686,"The Time Traveler's Wife, Audrey Niffenegger",5
+3686,,6
+3687,"The Princess Bride, William Goldman",1
+3687,"Chocolat, Joanne Harris",2
+3687,"The Luck of the Bodkins, PG Wodehouse",3
+3687,,4
+3687,"Memoirs of a Geisha, Arthur Golden
+
+",5
+3687,,6
+3688,"To Kill A Mocking Bird, Harper Lee",1
+3688,"Gone with the Wind, Margaret Mitchell",2
+3688,"The Color Purple, Alice Walker",3
+3688,,4
+3688,"The Luck of the Bodkins, PG Wodehouse",5
+3688,,6

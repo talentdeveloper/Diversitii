@@ -1,0 +1,145 @@
+ABOUT
+
+This program is designed to insert provided data into the Firebase database and storage associated
+with the Diversitii Challenge app.
+
+It will work with both CSV and JSON input files and can handle special characters, so
+long as they are pasted into the CSV or JSON files provided in the "assets" folder.
+
+It also includes a feature to check for potential data overwrites before completing an upload
+operation (if, for example, an answer is marked with AnswerId 1 for TopicId 3 and an answer 1 for
+topic 3 already exists in the database, the program will show an alert if set to do so).
+
+On error conditions, messages will be displayed at the bottom of the device screen, and in the
+Logcat logs.
+
+
+CAVEATS:
+-   If an upload operation is canceled, no updates will be made server-side. This is to give you a
+    chance to review or remove any lines that would cause overwrites before committing them.
+-   Category icons must use the file extension .png to allow transparency
+-   The program will not catch duplicate IDs within the dataset being written, e.g. if a file
+    contains more than 1 category with a CategoryId of 1, the furthest down the file will overwrite
+    the data for those that appeared before it.
+-   The JSON file handling is more robust than the CSV and should be used if commas exist within
+    CSV cells.
+
+
+
+STEPS TO SETUP
+
+1) Copy the google-services.json from MobileApplication to the "app" folder in this project
+
+
+2) From the left-hand menu of the console of your Firebase account, go to "Database" and enable
+"Cloud Firestore".
+From the "Cloud Firestore" page, open the "RULES" tab and replace the text there with:
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+
+then click "PUBLISH".
+
+
+3) From the left-hand menu of the console of your Firebase account, go to "Storage" and add a folder
+called "icons".
+
+**Note this next step will break the game application if it has not yet been updated for the new
+infrastructure. You can leave the existing rules and simply add the new one (the 3 lines in the
+middle of the text block below) to keep the older app version functioning.**
+
+Open the "RULES" tab and replace the text there with:
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /icons/{fileName} {
+      allow read, write: if request.auth != null && fileName.matches('.*\\.png');
+    }
+    match /offers/offers.txt {
+      allow read: if request.auth != null;
+    }
+  }
+}
+
+then click "PUBLISH".
+
+
+4) Adding data
+
+Copy-paste JSON into the JSON files provided in the "assets" folder, OR,
+copy-paste CSV file contents into the CSV files provided in the "assets" folder (When you run the
+app, set the input file type accordingly).
+
+Then add category icons, each named "icon.png" to a subfolder in the "assets" folder, where each
+subfolder is named "catX" (no quotes) where X is the CategoryId of the icon's category, e.g. "cat1".
+
+For the existing data entities (topics, questions, and answers), I kept the same format that has
+been used to date in the CSV/JSON files, and used similar formats for the added entities.
+The expected JSON keys/column headings (these can be changed in the code) for each file are as
+follows:
+
+answers.json
+    "AnswerId"      integer, a unique identifier within the topic the answer belongs to
+    "TopicId"       integer, the "TopicId" of the answer's topic
+    "Answers"       text, the text of the answer
+    JSON SAMPLE:    [{"TopicId":1,"Answers":"Hector","AnswerId":1},{"TopicId":1,"Answers":"Babbit and Castello","AnswerId":2},{"TopicId":1,"Answers":"“Sufferin s........”","AnswerId":3},{"TopicId":1,"Answers":"Bingo and Bopey","AnswerId":4},{"TopicId":1,"Answers":"Spike","AnswerId":5},{"TopicId":1,"Answers":"Sylvester","AnswerId":6},{"TopicId":2,"Answers":"Grandfather","AnswerId":1},{"TopicId":2,"Answers":"Odie","AnswerId":2},{"TopicId":2,"Answers":"Garfield's Pet Force","AnswerId":3},{"TopicId":2,"Answers":"Muncie","AnswerId":4},{"TopicId":2,"Answers":"Son","AnswerId":5},{"TopicId":2,"Answers":"Garfield Gets Real","AnswerId":6},{"TopicId":3,"Answers":"Mr Jinks","AnswerId":1},{"TopicId":3,"Answers":"Alice","AnswerId":2},{"TopicId":3,"Answers":"Crookshanks","AnswerId":3},{"TopicId":3,"Answers":"Bigglesworth","AnswerId":4},{"TopicId":3,"Answers":"Cait Sith","AnswerId":5},{"TopicId":3,"Answers":"Felix","AnswerId":6},{"TopicId":4,"Answers":28,"AnswerId":1},{"TopicId":4,"Answers":"The Angel Islington","AnswerId":2},{"TopicId":4,"Answers":"Landlords Game","AnswerId":3},{"TopicId":4,"Answers":26,"AnswerId":4},{"TopicId":4,"Answers":"Trading Game","AnswerId":5},{"TopicId":4,"Answers":"Whitechapel","AnswerId":6},{"TopicId":5,"Answers":24,"AnswerId":1},{"TopicId":5,"Answers":"Bar Point","AnswerId":2},{"TopicId":5,"Answers":64,"AnswerId":3},{"TopicId":5,"Answers":21,"AnswerId":4},{"TopicId":5,"Answers":22,"AnswerId":5},{"TopicId":5,"Answers":"Middle Point","AnswerId":6}]
+    CSV SAMPLE:     TopicId,Answers,AnswerId
+                    11,First circumnavigation of the world,1
+                    11,First to find the Northwest Passage,2
+
+cats.json
+    "CategoryId"    integer, a unique identifier
+    "Text"          text, the name of the category
+    JSON SAMPLE:    [{"CategoryId":1,"Text":"Books"},{"CategoryId":2,"Text":"Movies"}]
+    CSV SAMPLE:     CategoryId,Text
+                    4,History
+
+packs.json
+    "PackId"        integer, a unique identifier
+    "DoPromote"     boolean (either true or false), whether or not the pack should be promoted in
+                    the sliding panels
+    "CategoryId"    integer, the "CategoryId" of the pack's category. OPTIONAL--if not supplied,
+                    pack will be treated as a random pack with no icon
+    "TopicIds"      text, a semicolon-separated list of the "TopicId"s for each topic in this pack
+    JSON SAMPLE:    [{"PackId":1,"DoPromote":false,"CategoryId":2,"TopicIds":"1;2;5"},{"PackId":2,"DoPromote":true,"TopicIds":"3;4"}]
+                       **boolean values must be lowercase unless quotes are used, e.g. "FALSE", "True"**
+    CSV SAMPLE:     PackId,DoPromote,CategoryId,TopicIds
+                    3,false,4,11;12
+                    4,true,,13;14;15
+
+questions.json
+    "QuestionId"    integer, a unique identifier within the topic the question belongs to
+    "TopicId"       integer, the "TopicId" of the question's topic
+    "Questions"     text, the text of the question
+    "AnswerId"      integer, the "AnswerId" of the question's correct answer
+    "SubtopicId"    integer, the "SubtopicId" of the topic's subtopic. OPTIONAL--if not provided, it
+                    will default to a subtopic with a text equal to the question's topic's text
+    "Points"        integer, the points the question is worth. OPTIONAL--if not provided, it will
+                    default to the DEFAULT_QUESTION_POINTS value defined in Constants.java in this
+                    program
+    JSON SAMPLE:    [{"QuestionId":1,"TopicId":1,"Questions":"Name the bulldog in the Sylvester & Tweety Bird cartoons? ","AnswerId":1,"SubtopicId":2,"Points":2},{"QuestionId":2,"TopicId":1,"Questions":"Which two cats, based on famous comedians, appeared with Tweety in his first cartoon 'A Tale of Two Kitties'? ","AnswerId":2},{"QuestionId":3,"TopicId":1,"Questions":"Sylvester J Pussycat's expressive catchphrase?","AnswerId":3},{"QuestionId":1,"TopicId":2,"Questions":"Which member of his family did creator Jim Davis name Garfield, his lazy cat after? ","AnswerId":1},{"QuestionId":2,"TopicId":2,"Questions":"What is the name of the dog owned by Jon Arbuckle?","AnswerId":2},{"QuestionId":3,"TopicId":2,"Questions":"Which movie features planet Dorkon, Professor Wally & the Moscram ray gun ?","AnswerId":3},{"QuestionId":1,"TopicId":3,"Questions":"This cat made his first appearance in Feline Follies (1919)?","AnswerId":1},{"QuestionId":2,"TopicId":3,"Questions":"Who met the Cheshire Cat in Wonderland? ","AnswerId":2},{"QuestionId":3,"TopicId":3,"Questions":"Hermione Granger's pet cat?","AnswerId":3},{"QuestionId":1,"TopicId":4,"Questions":"How many property spaces are there on a Monopoly game board? ","AnswerId":1},{"QuestionId":2,"TopicId":4,"Questions":"Which square on the UK board went on to be Lyons Corner House before it became a bank?","AnswerId":2},{"QuestionId":3,"TopicId":4,"Questions":"Designed as a taxation game, the first Monopoly type game to be patented was called?","AnswerId":3},{"QuestionId":1,"TopicId":5,"Questions":"How many triangles are there on a backgammon board? ","AnswerId":1},{"QuestionId":2,"TopicId":5,"Questions":"What is the 7-point referred to as? ","AnswerId":2},{"QuestionId":3,"TopicId":5,"Questions":"What is the highest number on a doubling cube?","AnswerId":3}]
+    CSV SAMPLE:     QuestionId,TopicId,Questions,AnswerId,SubtopicId,Points
+                    1,11,What nationality was Ferdinand Magellan?,1
+                    2,11,What was unique about Magellan's expedition of 1519-1522?,2,2
+                    3,11,What was the name of Magellan's ship?,3,,4
+
+subtopics.json
+    "SubtopicId"    integer, a unique identifier
+    "Text"          text, the name of the subtopic
+    JSON SAMPLE:    [{"SubtopicId":1,"Text":"Classics"},{"SubtopicId":2,"Text":"Cartoons"}]
+    CSV SAMPLE:     SubtopicId,Text
+                    1,Classics
+                    2,Cartoons
+
+topics.json
+    "TopicId"       integer, a unique identifier
+    "Topic"         text, the name of the topic
+    "CategoryId"    integer, the "CategoryId" of the topic's category
+    JSON SAMPLE:    [{"TopicId":1,"Topic":"A PUDY CAT AND A BIRD", "CategoryId": 3},{"TopicId":2,"Topic":"A STRIPED GINGER CAT ", "CategoryId": 4},{"TopicId":3,"Topic":"CARTOON CATS", "CategoryId": 5},{"TopicId":4,"Topic":"IT STARTS AT OLD KENT ROAD", "CategoryId": 3},{"TopicId":5,"Topic":"BACKGAMMON", "CategoryId": 3}]
+    CSV SAMPLE:     TopicId,Topic,CategoryId
+                    11,FERDINAND MAGELLAN,4
