@@ -1,0 +1,219 @@
+<resources>
+    <string name="app_name">Diversitii Challenge</string>
+
+    <!--MAIN-->
+    <string name="error_firebase">Authentication error</string>
+    <string name="error_billing_setup">Error setting up in-app billing: %s</string>
+    <string name="error_inventory">Error fetching purchase history</string>
+    <string name="error_inventory2">Error fetching purchase history: %s</string>
+    <string name="error_purchase">Error initiating purchase</string>
+    <string name="error_purchasing">Error submitting purchase: %s</string>
+    <string name="error_purchasing2">Error submitting purchase: authentication failed</string>
+    <string name="upgraded">Your account has been upgraded!</string>
+    <string name="confirm_purchase">Purchase upgrade to remove timer?</string>
+    <string name="ok">OK</string>
+
+    <!--TOPICS-->
+    <string name="topic_1">Topic 1</string>
+    <string name="topic_2">Topic 2</string>
+    <string name="topic_3">Topic 3</string>
+    <string name="topic_4">Topic 4</string>
+
+    <!--PACKS-->
+    <string name="confirm_purchase_pack">Purchase new topic pack %d?</string>
+    <string name="confirm_purchase_cat_pack">Purchase category pack %s?</string>
+    <string name="confirm_purchase_category_pack">Purchase pack with category %s?</string>
+    <string name="confirm_purchase_membership">Purchase membership?</string>
+    <string name="confirm_purchase_membership_type">Purchase %s?</string>
+    <string name="confirm_purchase_multipack">Purchase multiple packs?</string>
+    <string name="warn_purchase_multipack">Purchase multiple packs? *Pack(s) already purchased will be purchased again*</string>
+    <string name="purchased_pack">New topics added!</string>
+    <string name="purchased_multipack">Multipack topics added!</string>
+    <string name="purchased_membership">Purchased membership: all current topics added!</string>
+    <string name="title_topic_pack">TOPIC PACK %d</string>
+    <string name="title_topic_pack_port">T-PK %d</string>
+    <string name="unlock_pack">UNLOCK</string>
+    <string name="owned_pack">OWNED</string>
+    <string name="no_packs">No packs available</string>
+    <string name="format_packs_text">Packs %1$d - %2$d</string>
+
+    <!--REPORT-->
+    <string name="list_item">, %s</string>
+    <string name="spelling_error">SPELLING ERROR</string>
+    <string name="wrong_topic">WRONG TOPIC</string>
+    <string name="wrong_answer">WRONG ANSWER</string>
+    <string name="other_error">OTHER</string>
+    <string name="corrections">CORRECTIONS</string>
+    <string name="send">SEND</string>
+    <string name="details_hint">Enter details&#8230;</string>
+    <string name="email_title">Application Report</string>
+    <string name="email_report">Error(s): %1$s\nDetails: %2$s</string>
+    <string name="prompt_email">Select email app:</string>
+    <string name="error_no_email">No email app installed</string>
+    <string name="error_no_selection">Please check a category</string>
+    <string name="error_no_details">Please enter details</string>
+    <string name="success_email">Message sent!</string>
+
+    <!--RULES AND OFFERS-->
+    <string name="game_rules">GAME RULES</string>
+    <string name="game_rules_detail">A game of skill, knowledge and a little luck.\nSingle Player Game: Press the single player tab on the Scorecard Activity.\n\t\tEnter your name and confirm this is correct.\n\t\t\t\tYour name will now appear on the Player 1 tab.\n\t\t\t\tOnce you have successfully entered your name on the Player Tab, you are ready to start the game.\n\t\t\t\tPress the play button.\n\t\t\t\tOn pressing the play button, you will be taken to the Topic Selection Activity.\n\t\t\t\tChoose a random.\n\t\t\t\tYou will now have three questions to answer on that Topic.\n\t\t\t\tEach question you get right will give you 1 point.\n\t\t\t\tYour score will be reflected here and on the score.\n\t\t\t\tPlay as many topics as you want and share your scores on Facebook \n\n\nMulti Player Game: Press the multi-player tab on the Scorecard Activity.\n\t\tEnter a player name and confirm this is correct.\n\t\t\t\tThe first name will now appear on the Player 1 tab.\n\t\t\t\tThe second player can now enter their name.\n\t\t\t\tThe second name will now appear on the Player 2 tab.\n\t\t\t\tUp to four people can play together.\n\t\t\t\tOnce you have successfully entered names on the Player Tabs, you are ready to start the game.\n\t\t\t\tPlayer 1 now presses the play button\n\t\t\t\tOn pressing the play button, Player 1 will be taken to the Topic Selection Activity.\n\t\t\t\tA random topic is then chosen\n\t\t\t\tYou will now have three questions to answer on that Topic.\n\t\t\t\tEach question you get right will give you 1 point.\n\t\t\t\tYour score will be reflected here and on the score.\n\t\t\t\tEach player is given three topics to answer on their turn.\n\t\t\t\tAt the end of a players turn the game will automatically switch to the next player.\n\t\t\t\tShare your scores on Facebook.\n\n\nRestart Game:\t\t\tTo restart the game press the Restart Game Tab.\n\t\t\t\t\tOnce pressed this will take all scores back to Zero.\nNo Timer Upgrade:\t\tThere will be a time limit on answering questions. \n\t\t\t\t\tTo remove this and get unlimited time to answer questions you will need to upgrade.\nTopic Packs:\t\t\tFurther Topic Packs can be downloaded to enhance the game.\n\t\t\t\t\tThe more Topics you have the more variety of Topics you have.\n\n\nTopic Search Box:\t\tYou can choose the Topics you don’t wish to have on your application here.\n\t\t\t\t\tThe application will always retain a minimum of 200 Topics.</string>
+    <string name="offers">OFFERS</string>
+    <string name="error_offers">Error retrieving today\'s offer</string>
+
+    <!--SCORECARD-->
+    <string name="enter_name">Enter name</string>
+    <string name="player_1">Player 1</string>
+    <string name="player_2">Player 2</string>
+    <string name="player_3">Player 3</string>
+    <string name="player_4">Player 4</string>
+    <string name="confirm_restart">Scores will be reset. Proceed?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="scores">Scores</string>
+    <string name="game_over">Game over!</string>
+    <string name="no_lives">Out of lives!</string>
+    <string name="game_winner">WINNER!</string>
+    <string name="game_draw">DRAW!</string>
+
+    <!--SETTINGS-->
+    <string name="delete">DELETE</string>
+    <string name="notifications">NOTIFICATIONS</string>
+    <string name="notifications_lc">Notifications</string>
+    <string name="scorecard">SCORECARD</string>
+    <string name="website">WEBSITE</string>
+    <string name="play">PLAY</string>
+    <string name="pause">PAUSE</string>
+    <string name="stop">STOP</string>
+    <string name="background_music">BACKGROUND MUSIC</string>
+    <string name="off">OFF</string>
+    <string name="on">ON</string>
+    <string name="topic_search_box">TOPIC SEARCH BOX</string>
+    <string name="sound_effects">SOUND EFFECTS</string>
+    <string name="search_hint">Search here&#8230;</string>
+    <string name="topic_deleted">Topic deleted</string>
+    <string name="error_topic_delete">No matching topic</string>
+    <!--GAME SETTINGS-->
+    <string name="game_settings">GAME SETTINGS</string>
+    <string name="game_score">GAME SCORE</string>
+    <string name="game_lives">GAME LIVES</string>
+    <string name="points_value">POINTS VALUE</string>
+    <string name="timer">TIMER</string>
+    <string name="game_mode_default">FAMILY &amp; FRIENDS</string>
+    <string name="default_timer">X</string>
+    <string name="default_points_value">1</string>
+    <string name="default_game_lives">5</string>
+    <string name="default_game_score">5</string>
+    <string name="error_game_in_progress">Game in progress</string>
+
+    <!--GAME LOOP-->
+    <string name="topic_score">TOPIC SCORE</string>
+    <string name="time_up">Time\'s up</string>
+    <string name="question_format">(%1$d/%2$d) %3$s</string>
+    <string name="question_format1">%1$d/%2$d</string>
+    <string name="question_format2">%1$d. %2$s</string>
+    <string name="error_no_player">No player to play</string>
+    <string name="answer_correct">CORRECT</string>
+    <string name="answer_incorrect">INCORRECT</string>
+
+    <!--TOPIC CATEGORIES-->
+    <string name="topic_categories">New Topic Categories</string>
+    <string name="error_categories">Error retrieving categories</string>
+
+    <!--TOPIC INPUT-->
+    <string name="add_custom_topics">Put Your Own Topics into the Game</string>
+    <string name="add_topic_prompt">Enter Your Own Topic Here</string>
+    <string name="add_question1">Enter Question 1</string>
+    <string name="add_question2">Enter Question 2</string>
+    <string name="add_question3">Enter Question 3</string>
+    <string name="add_answer1">Enter Correct\nAnswer 1</string>
+    <string name="add_answer2">Enter Correct\nAnswer 2</string>
+    <string name="add_answer3">Enter Correct\nAnswer 3</string>
+    <string name="add_answer4">Enter Alternative\nAnswer 4</string>
+    <string name="add_answer5">Enter Alternative\nAnswer 5</string>
+    <string name="add_answer6">Enter Alternative\nAnswer 6</string>
+    <string name="error_topic_input">Topic, Questions, and Answers required</string>
+    <string name="error_answer_input">Please provide at least 4 answers</string>
+    <string name="msg_topic_added">Topic saved!</string>
+    <string name="action_open">OPEN</string>
+
+    <!--CATEGORY CONTROLLER-->
+    <string name="cc">CC</string>
+    <string name="game_mode1">GAME MODE 1</string>
+    <string name="game_mode2">GAME MODE 2</string>
+    <string name="game_mode3">GAME MODE 3</string>
+    <string name="category_controller">CATEGORY CONTROLLER</string>
+    <string name="categories">CATEGORIES</string>
+    <string name="available">AVAILABLE</string>
+    <string name="selected">SELECTED</string>
+    <string name="membership_options">MEMBERSHIP OPTIONS</string>
+    <string name="buy_now">BUY NOW</string>
+    <string name="new_topics">NEW TOPICS AVAILABLE</string>
+    <string name="random_pack">RANDOM</string>
+    <string name="membership">membership</string>
+    <string name="membership_copper">COPPER MEMBERSHIP\nPACKS 1&#8211;25</string>
+    <string name="membership_bronze">BRONZE MEMBERSHIP\nPACKS 1&#8211;50</string>
+    <string name="membership_silver">SILVER MEMBERSHIP\nPACKS 1&#8211;75</string>
+    <string name="membership_gold">GOLD MEMBERSHIP\nPACKS 1&#8211;100</string>
+    <string name="membership_diamond_annual">DIAMOND MEMBERSHIP\nAnnual Subscription (70 topics monthly)</string>
+    <string name="membership_diamond_biannual">DIAMOND MEMBERSHIP\nBiannual Subscription (70 topics monthly)</string>
+    <string name="membership_diamond_quarterly">DIAMOND MEMBERSHIP\nQuarterly Subscription (70 topics monthly)</string>
+    <string name="membership_red_diamond_annual">RED DIAMOND MEMBERSHIP\nAnnual Subscription (175 topics monthly)</string>
+    <string name="membership_red_diamond_biannual">RED DIAMOND MEMBERSHIP\nBiannual Subscription (175 topics monthly)</string>
+    <string name="membership_red_diamond_quarterly">RED DIAMOND MEMBERSHIP\nQuarterly Subscription (175 topics monthly)</string>
+    <string name="copper">Copper Membership</string>
+    <string name="bronze">Bronze Membership</string>
+    <string name="silver">Silver Membership</string>
+    <string name="gold">Gold Membership</string>
+    <string name="diamond_annual">Diamond Membership Annual</string>
+    <string name="diamond_biannual">Diamond Membership Biannual</string>
+    <string name="diamond_quarterly">Diamond Membership Quarterly</string>
+    <string name="red_diamond_annual">Red Diamond Membership Annual</string>
+    <string name="red_diamond_biannual">Red Diamond Membership Biannual</string>
+    <string name="red_diamond_quarterly">Red Diamond Membership Quarterly</string>
+    <string name="error_membership">Error applying membership</string>
+    <string name="error_already_subscribed">Already subscribed</string>
+    <string name="error_membership_supply">Not enough packs available at this time, please try again later</string>
+    <string name="membership_locked">Must own COPPER, BRONZE, SILVER, and GOLD</string>
+    <string name="membership_owned">Already owned</string>
+
+    <!--OTHER-->
+    <string name="app_website">https://www.appwebsite.com</string><!-- FIXME (URL must include http or https) -->
+    <string name="contact_email">diversitiichallenge@gmail.com</string><!-- DONE -->
+    <string name="confirm">CONFIRM</string>
+    <string name="facebook_app_id">130958827507145</string> <!-- DONE See README -->
+    <string name="facebook_authorities">com.facebook.app.FacebookContentProvider130958827507145</string> <!-- DONE See README -->
+    <string name="fb_login_protocol_scheme">fb344669139297387</string>
+    <string name="error_facebook">Connection error occurred</string>
+    <string name="success_facebook">Account connected!</string>
+    <string name="error_network">Not connected to a network</string>
+    <string name="error_player_names">Enter player names to play multiplayer</string><!-- FIXME customize -->
+    <string name="error_select_topic">Select a topic to play</string>
+    <string name="error_question">No questions found for topic</string>
+    <string name="no_score">0</string>
+
+    <string name="descr_mask">masks</string>
+    <string name="descr_music">musicians</string>
+    <string name="descr_splash">splash</string>
+    <string name="descr_microscope">microscope</string>
+    <string name="descr_prev">previous</string>
+    <string name="descr_next">next</string>
+    <string name="descr_play">play</string>
+    <string name="descr_settings">settings</string>
+    <string name="descr_book">books</string>
+    <string name="descr_magnify">magnifying glass</string>
+    <string name="descr_palm">palm tree</string>
+    <string name="descr_mic">microphone</string>
+    <string name="descr_report">report</string>
+    <string name="descr_owl">owl</string>
+    <string name="descr_trophy">trophy</string>
+    <string name="descr_heart">heart</string>
+    <string name="descr_multiplayer">multiplayer</string>
+    <string name="descr_single_player">single player</string>
+    <string name="descr_restart">restart game</string>
+    <string name="descr_reel">movie reel</string>
+    <string name="descr_membership">Membership</string>
+    <string name="descr_multi_pack">Multi-Pack</string>
+    <string name="descr_player_icon">Player Icon</string>
+    <string name="descr_cancel">Cancel</string>
+
+</resources>

@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Animations" />
+
+    <style name="Animations.expand">
+        <item name="android:windowEnterAnimation">@anim/expand</item>
+    </style>
+
+    <style name="Animations.expand_start">
+        <item name="android:windowEnterAnimation">@anim/expand_start</item>
+    </style>
+
+    <style name="Animations.sliding">
+        <item name="android:windowEnterAnimation">@anim/sliding</item>
+    </style>
+
+</resources>

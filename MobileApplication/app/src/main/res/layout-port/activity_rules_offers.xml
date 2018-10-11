@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red"
+    android:paddingBottom="@dimen/activity_margin_vert"
+    android:paddingTop="@dimen/activity_margin_vert">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/activity_margin_horiz"
+        android:paddingLeft="@dimen/activity_margin_horiz"
+        android:paddingRight="@dimen/activity_margin_horiz"
+        android:paddingStart="@dimen/activity_margin_horiz">
+
+        <ImageView
+            android:id="@+id/face"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/descr_mask"
+            android:padding="@dimen/div_xxs"
+            android:scaleType="fitStart"
+            android:src="@drawable/face" />
+
+        <ImageView
+            android:id="@+id/dcheading"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/div_xxs"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dcheading" />
+
+        <ImageView
+            android:id="@+id/music"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:contentDescription="@string/descr_music"
+            android:padding="@dimen/div_xxs"
+            android:scaleType="fitCenter"
+            android:src="@drawable/music" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@id/ll_top"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/blueSplash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/descr_splash"
+            android:scaleType="fitXY"
+            android:src="@drawable/bluesplash" />
+
+        <ImageView
+            android:id="@+id/whiteSplash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/descr_splash"
+            android:paddingEnd="@dimen/div_xxl"
+            android:paddingLeft="@dimen/div_xxl"
+            android:paddingRight="@dimen/div_xxl"
+            android:paddingStart="@dimen/div_xxl"
+            android:scaleType="fitXY"
+            android:src="@drawable/whitesplash" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/div_xxxl">
+
+            <TextView
+                android:id="@+id/gameRulesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/div_s"
+                android:gravity="center"
+                android:text="@string/game_rules"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/text_sz_m"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/div_l"
+                android:layout_marginEnd="@dimen/div_s"
+                android:layout_marginLeft="@dimen/div_s"
+                android:layout_marginRight="@dimen/div_s"
+                android:layout_marginStart="@dimen/div_s"
+                android:layout_marginTop="@dimen/div_s"
+                android:paddingEnd="@dimen/activity_margin_horiz"
+                android:paddingLeft="@dimen/activity_margin_horiz"
+                android:paddingRight="@dimen/activity_margin_horiz"
+                android:paddingStart="@dimen/activity_margin_horiz">
+
+                <TextView
+                    android:id="@+id/gameRulesRulesText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/game_rules_detail"
+                    android:textSize="@dimen/text_sz_xxs" />
+            </ScrollView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_footer"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/activity_margin_horiz"
+        android:paddingLeft="@dimen/activity_margin_horiz"
+        android:paddingRight="@dimen/activity_margin_horiz"
+        android:paddingStart="@dimen/activity_margin_horiz">
+
+        <ImageView
+            android:id="@+id/whiteMicroscope"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/descr_microscope"
+            android:onClick="onClick"
+            android:padding="@dimen/div_xxs"
+            android:scaleType="fitCenter"
+            android:src="@drawable/white_microscope" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/div_xxs">
+
+            <ImageView
+                android:id="@+id/ovalOffers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/offers"
+                android:src="@drawable/yellow_oval" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/offersText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|top"
+                    android:paddingTop="@dimen/div_m"
+                    android:text="@string/offers"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_sz_m"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/offersOffersText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|top"
+                    android:padding="@dimen/div_xxs"
+                    android:scrollbars="vertical"
+                    android:text="@string/error_offers"
+                    android:textSize="@dimen/text_sz_xxs"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/offer_progress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="@dimen/div_xxxl" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

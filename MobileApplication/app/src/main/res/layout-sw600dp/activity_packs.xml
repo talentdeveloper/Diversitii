@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gold">
+
+    <ProgressBar
+        android:id="@+id/screen_wait"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/screen_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_margin_vert"
+        android:paddingEnd="@dimen/activity_margin_horiz"
+        android:paddingLeft="@dimen/activity_margin_horiz"
+        android:paddingRight="@dimen/activity_margin_horiz"
+        android:paddingStart="@dimen/activity_margin_horiz"
+        android:paddingTop="@dimen/activity_margin_vert">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/land_height_header"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/owl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/descr_owl"
+                android:padding="@dimen/div_xxs"
+                android:scaleType="fitCenter"
+                android:src="@drawable/owl" />
+
+            <ImageView
+                android:id="@+id/dcHeading"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/div_xxs"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo" />
+
+            <ImageView
+                android:id="@+id/movieReel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/descr_reel"
+                android:gravity="bottom"
+                android:onClick="onClick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/moviereel" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/div_xs"
+                android:layout_marginRight="@dimen/div_xs"
+                android:layout_marginTop="@dimen/div_m"
+                android:layout_weight="2">
+
+                <GridView
+                    android:id="@+id/gv_packs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alwaysDrawnWithCache="true"
+                    android:clipChildren="true"
+                    android:gravity="center_horizontal"
+                    android:horizontalSpacing="0dp"
+                    android:numColumns="2"
+                    android:padding="0dp"
+                    android:scrollingCache="true"
+                    android:smoothScrollbar="true"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="@dimen/gv_spacing_vert" />
+
+                <TextView
+                    android:id="@+id/tv_no_packs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/no_packs"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_membership"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/div_s"
+                    android:layout_marginStart="@dimen/div_s"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descr_membership"
+                    android:onClick="promptPurchaseMembership"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/membership" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/iv_membership"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginEnd="@dimen/div_xs"
+                    android:layout_marginRight="@dimen/div_xs">
+
+                    <GridView
+                        android:id="@+id/gv_multipacks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:horizontalSpacing="@dimen/gv_spacing_horiz"
+                        android:numColumns="1"
+                        android:padding="@dimen/div_m"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="@dimen/gv_spacing_vert" />
+
+                    <TextView
+                        android:id="@+id/tv_no_multipacks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/no_packs"
+                        android:textColor="@android:color/white"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

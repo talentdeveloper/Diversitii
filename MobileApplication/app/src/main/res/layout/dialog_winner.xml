@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/red_rectangle_rounded_corners"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_margin_vert"
+    android:paddingEnd="@dimen/activity_margin_horiz"
+    android:paddingLeft="@dimen/activity_margin_horiz"
+    android:paddingRight="@dimen/activity_margin_horiz"
+    android:paddingStart="@dimen/activity_margin_horiz"
+    android:paddingTop="@dimen/activity_margin_vert">
+
+    <ImageView
+        android:layout_width="@dimen/width_player_icon"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/descr_trophy"
+        android:scaleType="fitCenter"
+        android:src="@drawable/trophy" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/div_s"
+        android:text="@string/game_winner"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/text_sz_huge"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="@dimen/width_player_icon"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/descr_player_icon"
+        android:scaleType="fitCenter"
+        android:src="@drawable/player_icon_game_land" />
+
+    <TextView
+        android:id="@+id/tv_winner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/div_s"
+        android:textColor="@color/gold"
+        android:textSize="@dimen/text_sz_xxl"
+        android:textStyle="bold" />
+
+</LinearLayout>

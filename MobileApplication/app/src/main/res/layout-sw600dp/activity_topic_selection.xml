@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_splash_land">
+
+    <ProgressBar
+        android:id="@+id/layout_loading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <RelativeLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/red"
+        android:paddingBottom="@dimen/div_s"
+        android:paddingEnd="@dimen/activity_margin_horiz"
+        android:paddingLeft="@dimen/activity_margin_horiz"
+        android:paddingRight="@dimen/activity_margin_horiz"
+        android:paddingStart="@dimen/activity_margin_horiz"
+        android:paddingTop="@dimen/activity_margin_vert">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rl_bottom"
+            android:layout_alignParentTop="true"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_scores1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="@dimen/div_xxs"
+                    android:paddingEnd="@dimen/div_tiny"
+                    android:paddingLeft="@dimen/div_m"
+                    android:paddingRight="@dimen/div_tiny"
+                    android:paddingStart="@dimen/div_m"
+                    android:text="@string/scores"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/text_sz_l"
+                    android:textStyle="bold" />
+
+                <!--Player 1-->
+
+                <LinearLayout
+                    android:id="@+id/ll_player1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_scores1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_player_icon1"
+                        android:layout_width="@dimen/width_player_icon"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/descr_player_icon"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/player_icon_blank" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/score_text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/div_xxs"
+                            android:layout_marginLeft="@dimen/div_xl"
+                            android:layout_marginRight="@dimen/div_xxs"
+                            android:layout_marginStart="@dimen/div_xl"
+                            android:layout_marginTop="@dimen/div_m"
+                            android:textColor="@color/yellow"
+                            android:textSize="@dimen/text_sz_xl"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/lives_text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/div_tiny"
+                            android:layout_marginEnd="@dimen/div_xxs"
+                            android:layout_marginLeft="@dimen/div_xxxl"
+                            android:layout_marginRight="@dimen/div_xxs"
+                            android:layout_marginStart="@dimen/div_xxxl"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_sz_m"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/playerName1"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_player1"
+                    android:layout_marginEnd="@dimen/div_xxxl"
+                    android:layout_marginRight="@dimen/div_xxxl"
+                    android:layout_marginTop="@dimen/div_s"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:padding="@dimen/div_xxs"
+                    android:text="@string/player_1"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_sz_xs"
+                    android:textStyle="bold" />
+
+                <!--Player 3-->
+
+                <LinearLayout
+                    android:id="@+id/ll_player3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/playerName1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_player_icon3"
+                        android:layout_width="@dimen/width_player_icon"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/descr_player_icon"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/player_icon_blank" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/score_text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/div_xxs"
+                            android:layout_marginLeft="@dimen/div_xl"
+                            android:layout_marginRight="@dimen/div_xxs"
+                            android:layout_marginStart="@dimen/div_xl"
+                            android:layout_marginTop="@dimen/div_m"
+                            android:textColor="@color/yellow"
+                            android:textSize="@dimen/text_sz_xl"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/lives_text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/div_tiny"
+                            android:layout_marginEnd="@dimen/div_xxs"
+                            android:layout_marginLeft="@dimen/div_xxxl"
+                            android:layout_marginRight="@dimen/div_xxs"
+                            android:layout_marginStart="@dimen/div_xxxl"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_sz_m"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/playerName3"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_player3"
+                    android:layout_marginEnd="@dimen/div_xxxl"
+                    android:layout_marginRight="@dimen/div_xxxl"
+                    android:layout_marginTop="@dimen/div_s"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:padding="@dimen/div_xxs"
+                    android:text="@string/player_3"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_sz_xs"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.75">
+
+                <LinearLayout
+                    android:id="@+id/dcheading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_game_score"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/div_tiny"
+                        android:layout_marginLeft="@dimen/div_l"
+                        android:layout_marginRight="@dimen/div_tiny"
+                        android:layout_marginStart="@dimen/div_l"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_gold"
+                        android:gravity="center"
+                        android:padding="@dimen/div_xxs"
+                        android:text="@string/default_game_score"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/text_sz_l"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_points_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/div_l"
+                        android:layout_marginRight="@dimen/div_l"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_gold"
+                        android:gravity="center"
+                        android:padding="@dimen/div_xxs"
+                        android:text="@string/default_points_value"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/text_sz_l"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_title"
+                        android:layout_gravity="end"
+                        android:layout_weight="2"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:paddingBottom="@dimen/div_s"
+                        android:paddingEnd="@dimen/div_m"
+                        android:paddingLeft="@dimen/div_tiny"
+                        android:paddingRight="@dimen/div_m"
+                        android:paddingStart="@dimen/div_tiny"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/logo" />
+
+                    <ImageView
+                        android:id="@+id/iv_trophy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/descr_trophy"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/trophy" />
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/tl_topics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dcheading"
+                    android:layout_marginBottom="@dimen/div_xxxs"
+                    android:measureWithLargestChild="true"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:layout_marginBottom="@dimen/div_tiny"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <com.diversitii.dcapp.ResizingTextView
+                                android:id="@+id/topicBtn1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="@dimen/div_tiny"
+                                android:layout_marginRight="@dimen/div_tiny"
+                                android:background="@drawable/blue_rectangle"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:minLines="2"
+                                android:onClick="onClick"
+                                android:padding="@dimen/div_m"
+                                android:scrollbars="none"
+                                android:tag="1"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/text_sz_s"
+                                android:textStyle="bold" />
+
+                            <ProgressBar
+                                android:id="@+id/loading1"
+                                style="?android:attr/progressBarStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:indeterminateTint="@color/gold" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <com.diversitii.dcapp.ResizingTextView
+                                android:id="@+id/topicBtn2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="@dimen/div_tiny"
+                                android:layout_marginRight="@dimen/div_tiny"
+                                android:background="@drawable/blue_rectangle"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:minLines="2"
+                                android:onClick="onClick"
+                                android:padding="@dimen/div_m"
+                                android:scrollbars="none"
+                                android:tag="2"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/text_sz_s"
+                                android:textStyle="bold" />
+
+                            <ProgressBar
+                                android:id="@+id/loading2"
+                                style="?android:attr/progressBarStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:indeterminateTint="@color/gold" />
+                        </FrameLayout>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <com.diversitii.dcapp.ResizingTextView
+                                android:id="@+id/topicBtn3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="@dimen/div_tiny"
+                                android:layout_marginRight="@dimen/div_tiny"
+                                android:background="@drawable/blue_rectangle"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:minLines="2"
+                                android:onClick="onClick"
+                                android:padding="@dimen/div_m"
+                                android:scrollbars="none"
+                                android:tag="3"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/text_sz_s"
+                                android:textStyle="bold" />
+
+                            <ProgressBar
+                                android:id="@+id/loading3"
+                                style="?android:attr/progressBarStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:indeterminateTint="@color/gold" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <com.diversitii.dcapp.ResizingTextView
+                                android:id="@+id/topicBtn4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="@dimen/div_tiny"
+                                android:layout_marginRight="@dimen/div_tiny"
+                                android:background="@drawable/blue_rectangle"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:minLines="2"
+                                android:onClick="onClick"
+                                android:padding="@dimen/div_m"
+                                android:scrollbars="none"
+                                android:tag="4"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/text_sz_s"
+                                android:textStyle="bold" />
+
+                            <ProgressBar
+                                android:id="@+id/loading4"
+                                style="?android:attr/progressBarStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:indeterminateTint="@color/gold" />
+                        </FrameLayout>
+                    </TableRow>
+
+                </TableLayout>
+
+                <EditText
+                    android:id="@+id/enterNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tl_topics"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/white_rounded_rectangle"
+                    android:hint="@string/enter_name"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:padding="@dimen/div_s"
+                    android:textSize="@dimen/text_sz_xs"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/confirmBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/enterNameText"
+                    android:layout_centerHorizontal="true"
+                    android:background="@null"
+                    android:onClick="onClick"
+                    android:padding="@dimen/div_tiny"
+                    android:text="@string/confirm"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_sz_xs"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btn_cat_controller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/enterNameText"
+                    android:layout_marginLeft="@dimen/div_m"
+                    android:layout_marginStart="@dimen/div_m"
+                    android:layout_toEndOf="@+id/enterNameText"
+                    android:layout_toRightOf="@+id/enterNameText"
+                    android:background="@drawable/gold_less_rounded_rectangle"
+                    android:padding="@dimen/div_s"
+                    android:text="@string/cc"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_sz_m" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_scores2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="@dimen/div_xxs"
+                    android:paddingEnd="@dimen/div_m"
+                    android:paddingLeft="@dimen/div_tiny"
+                    android:paddingRight="@dimen/div_m"
+                    android:paddingStart="@dimen/div_tiny"
+                    android:text="@string/scores"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/text_sz_l"
+                    android:textStyle="bold" />
+
+                <!--Player 2-->
+
+                <LinearLayout
+                    android:id="@+id/ll_player2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_scores2"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/score_text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/div_xl"
+                            android:layout_marginLeft="@dimen/div_xxs"
+                            android:layout_marginRight="@dimen/div_xl"
+                            android:layout_marginStart="@dimen/div_xxs"
+                            android:layout_marginTop="@dimen/div_m"
+                            android:textColor="@color/yellow"
+                            android:textSize="@dimen/text_sz_xl"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/lives_text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/div_tiny"
+                            android:layout_marginEnd="@dimen/div_xxs"
+                            android:layout_marginLeft="@dimen/div_xxxl"
+                            android:layout_marginRight="@dimen/div_xxs"
+                            android:layout_marginStart="@dimen/div_xxxl"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_sz_m"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_player_icon2"
+                        android:layout_width="@dimen/width_player_icon"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/descr_player_icon"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/player_icon_blank" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/playerName2"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_player2"
+                    android:layout_marginLeft="@dimen/div_xxxl"
+                    android:layout_marginStart="@dimen/div_xxxl"
+                    android:layout_marginTop="@dimen/div_s"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:padding="@dimen/div_xxs"
+                    android:text="@string/player_2"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_sz_xs"
+                    android:textStyle="bold" />
+
+                <!--Player 4-->
+
+                <LinearLayout
+                    android:id="@+id/ll_player4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/playerName2"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/score_text4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/div_xl"
+                            android:layout_marginLeft="@dimen/div_xxs"
+                            android:layout_marginRight="@dimen/div_xl"
+                            android:layout_marginStart="@dimen/div_xxs"
+                            android:layout_marginTop="@dimen/div_m"
+                            android:textColor="@color/yellow"
+                            android:textSize="@dimen/text_sz_xl"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/lives_text4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/div_tiny"
+                            android:layout_marginEnd="@dimen/div_xxs"
+                            android:layout_marginLeft="@dimen/div_xxxl"
+                            android:layout_marginRight="@dimen/div_xxs"
+                            android:layout_marginStart="@dimen/div_xxxl"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_sz_m"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_player_icon4"
+                        android:layout_width="@dimen/width_player_icon"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/descr_player_icon"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/player_icon_blank" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/playerName4"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_player4"
+                    android:layout_marginLeft="@dimen/div_xxxl"
+                    android:layout_marginStart="@dimen/div_xxxl"
+                    android:layout_marginTop="@dimen/div_s"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:padding="@dimen/div_xxs"
+                    android:text="@string/player_4"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_sz_xs"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/div_xxs">
+
+            <ImageView
+                android:id="@+id/previousBtn"
+                android:layout_width="@dimen/width_btn_nav"
+                android:layout_height="@dimen/width_btn_nav"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/div_xxxl"
+                android:contentDescription="@string/descr_prev"
+                android:onClick="onClick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/previous" />
+
+            <ImageView
+                android:id="@+id/restartGameBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/div_xxxl"
+                android:layout_marginEnd="@dimen/div_m"
+                android:layout_marginLeft="@dimen/div_m"
+                android:layout_marginRight="@dimen/div_m"
+                android:layout_marginStart="@dimen/div_m"
+                android:layout_toEndOf="@+id/previousBtn"
+                android:layout_toLeftOf="@id/playBtn"
+                android:layout_toRightOf="@+id/previousBtn"
+                android:layout_toStartOf="@id/playBtn"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/descr_restart"
+                android:onClick="onClick"
+                android:padding="@dimen/div_m"
+                android:scaleType="fitCenter"
+                android:src="@drawable/restart_game" />
+
+            <ImageView
+                android:id="@+id/playBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/div_xxl"
+                android:contentDescription="@string/descr_play"
+                android:onClick="onClick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dicecolour_compressed" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/div_xxxl"
+                android:layout_marginEnd="@dimen/div_m"
+                android:layout_marginLeft="@dimen/div_m"
+                android:layout_marginRight="@dimen/div_m"
+                android:layout_marginStart="@dimen/div_m"
+                android:layout_toEndOf="@id/playBtn"
+                android:layout_toLeftOf="@id/nextBtn"
+                android:layout_toRightOf="@id/playBtn"
+                android:layout_toStartOf="@id/nextBtn"
+                android:padding="@dimen/div_tiny">
+
+                <ImageView
+                    android:id="@+id/multiplayerBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descr_multiplayer"
+                    android:onClick="onClick"
+                    android:padding="@dimen/div_xxxs"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/multiplayer" />
+
+                <ImageView
+                    android:id="@+id/singlePlayerBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descr_single_player"
+                    android:onClick="onClick"
+                    android:padding="@dimen/div_xxxs"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/single_player" />
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/nextBtn"
+                android:layout_width="@dimen/width_btn_nav"
+                android:layout_height="@dimen/width_btn_nav"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/div_xxxl"
+                android:contentDescription="@string/descr_next"
+                android:onClick="onClick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/forward" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/categories_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</FrameLayout>

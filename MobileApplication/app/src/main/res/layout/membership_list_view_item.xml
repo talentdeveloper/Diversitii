@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/blue_less_rounded_rectangle"
+    android:padding="@dimen/div_xs">
+
+    <TextView
+        android:id="@+id/tv_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="@dimen/div_m"
+        android:layout_marginStart="@dimen/div_m"
+        android:layout_toLeftOf="@+id/tv_buy"
+        android:layout_toStartOf="@+id/tv_buy"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_sz_xxs"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/div_m"
+        android:layout_marginLeft="@dimen/div_m"
+        android:layout_marginRight="@dimen/div_m"
+        android:layout_marginStart="@dimen/div_m"
+        android:text="@string/buy_now"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_sz_xxs"
+        android:textStyle="bold" />
+</RelativeLayout>

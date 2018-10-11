@@ -1,0 +1,64 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_margin_vert">16dp</dimen>
+    <dimen name="activity_margin_horiz">16dp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="border">3dp</dimen>
+
+    <dimen name="seek_bar">10dp</dimen>
+
+    <dimen name="radius_btn_xxs">10dp</dimen>
+    <dimen name="radius_btn_xs">15dp</dimen>
+    <dimen name="radius_btn_s">20dp</dimen>
+    <dimen name="radius_btn_m">30dp</dimen>
+    <dimen name="radius_btn_l">45dp</dimen>
+
+    <dimen name="div_neg_xxxl">-45dp</dimen>
+    <dimen name="div_neg_xxl">-25dp</dimen>
+    <dimen name="div_tiny">1dp</dimen>
+    <dimen name="div_xxxs">1dp</dimen>
+    <dimen name="div_xxs">3dp</dimen>
+    <dimen name="div_xs">5dp</dimen>
+    <dimen name="div_s">8dp</dimen>
+    <dimen name="div_m">10dp</dimen>
+    <dimen name="div_l">15dp</dimen>
+    <dimen name="div_xl">20dp</dimen>
+    <dimen name="div_xxl">25dp</dimen>
+    <dimen name="div_xxxl">30dp</dimen>
+    <dimen name="div_huge">50dp</dimen>
+    <dimen name="div_xhuge">60dp</dimen>
+
+    <dimen name="list_separator">3.0dp</dimen>
+    <dimen name="list_separator_l">5.0dp</dimen>
+    <dimen name="gv_spacing_vert">10dp</dimen>
+    <dimen name="gv_spacing_horiz">10dp</dimen>
+    <dimen name="neg_gv_spacing_horiz">-28dp</dimen>
+
+    <dimen name="width_oval_btn">25dp</dimen>
+    <dimen name="width_player_icon">50dp</dimen>
+    <dimen name="half_width_btn_nav">25dp</dimen>
+    <dimen name="width_btn_nav">50dp</dimen>
+    <dimen name="width_check">35dp</dimen>
+    <dimen name="width_half">180dp</dimen>
+
+    <dimen name="height_report_title">45dp</dimen>
+    <dimen name="height_title">30dp</dimen>
+    <dimen name="land_height_header">100dp</dimen>
+    <dimen name="height_header">130dp</dimen>
+    <dimen name="height_header_less_title">100dp</dimen>
+    <dimen name="height_footer">140dp</dimen>
+
+    <dimen name="text_sz_xxxs">8sp</dimen>
+    <dimen name="text_sz_xxs">12sp</dimen>
+    <dimen name="text_sz_xs">16sp</dimen>
+    <dimen name="text_sz_s">20sp</dimen>
+    <dimen name="text_sz_m">24sp</dimen>
+    <dimen name="text_sz_l">28sp</dimen>
+    <dimen name="text_sz_xl">32sp</dimen>
+    <dimen name="text_sz_xxl">36sp</dimen>
+    <dimen name="text_sz_xxxl">40sp</dimen>
+    <dimen name="text_sz_huge">50sp</dimen>
+
+</resources>

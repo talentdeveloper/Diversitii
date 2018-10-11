@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/red_rectangle_rounded_corners"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_margin_vert"
+    android:paddingEnd="@dimen/activity_margin_horiz"
+    android:paddingLeft="@dimen/activity_margin_horiz"
+    android:paddingRight="@dimen/activity_margin_horiz"
+    android:paddingStart="@dimen/activity_margin_horiz"
+    android:paddingTop="@dimen/activity_margin_vert">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/div_s"
+        android:text="@string/game_draw"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/text_sz_huge"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_draw1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/div_l"
+        android:textColor="@color/gold"
+        android:textSize="@dimen/text_sz_xl"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_draw2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/div_l"
+        android:textColor="@color/gold"
+        android:textSize="@dimen/text_sz_xl"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_draw3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/div_l"
+        android:textColor="@color/gold"
+        android:textSize="@dimen/text_sz_xl"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_draw4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/div_l"
+        android:textColor="@color/gold"
+        android:textSize="@dimen/text_sz_xl"
+        android:textStyle="bold" />
+
+</LinearLayout>

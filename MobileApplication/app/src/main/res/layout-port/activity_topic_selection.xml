@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_splash_port">
+
+    <ProgressBar
+        android:id="@+id/layout_loading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <RelativeLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue"
+        android:paddingBottom="@dimen/activity_margin_vert"
+        android:paddingEnd="@dimen/activity_margin_horiz"
+        android:paddingLeft="@dimen/activity_margin_horiz"
+        android:paddingRight="@dimen/activity_margin_horiz"
+        android:paddingStart="@dimen/activity_margin_horiz"
+        android:paddingTop="@dimen/activity_margin_vert">
+
+        <LinearLayout
+            android:id="@+id/ll_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/div_xl"
+                android:layout_marginRight="@dimen/div_xl"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_player_icon1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="@dimen/div_xs"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descr_player_icon"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/player_icon_port" />
+
+                <TextView
+                    android:id="@+id/score_text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_player_icon1"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_sz_m"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/playerName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/score_text1"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="@string/player_1"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/text_sz_xs"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <!--Logo-->
+                <ImageView
+                    android:id="@+id/dcheading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/ll_lives"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/div_s"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dcheading" />
+
+                <LinearLayout
+                    android:id="@+id/ll_lives"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lives_text1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/width_btn_nav"
+                        android:layout_marginBottom="@dimen/div_s"
+                        android:layout_marginEnd="@dimen/div_xxs"
+                        android:layout_marginRight="@dimen/div_xxs"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_red"
+                        android:gravity="center"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/text_sz_m"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/lives_text2"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/width_btn_nav"
+                        android:layout_marginBottom="@dimen/div_s"
+                        android:layout_marginLeft="@dimen/div_xxs"
+                        android:layout_marginStart="@dimen/div_xxs"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_red"
+                        android:gravity="center"
+                        android:textColor="@color/gold"
+                        android:textSize="@dimen/text_sz_m"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/div_xl"
+                android:layout_marginStart="@dimen/div_xl"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_player_icon2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="@dimen/div_xs"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descr_player_icon"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/player_icon_port" />
+
+                <TextView
+                    android:id="@+id/score_text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_player_icon2"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_sz_m"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/playerName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/score_text2"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:text="@string/player_2"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/text_sz_xs"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_topics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/enterNameText"
+            android:layout_below="@id/ll_top"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="@dimen/div_m"
+            android:layout_marginLeft="@dimen/div_m"
+            android:layout_marginRight="@dimen/div_m"
+            android:layout_marginStart="@dimen/div_m"
+            android:layout_marginTop="@dimen/div_xs"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/div_xs"
+                android:layout_weight="1">
+
+                <com.diversitii.dcapp.ResizingTextView
+                    android:id="@+id/topicBtn1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/yellow_rounded_rectangle"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:onClick="onClick"
+                    android:paddingBottom="@dimen/div_l"
+                    android:paddingEnd="@dimen/div_m"
+                    android:paddingLeft="@dimen/div_m"
+                    android:paddingRight="@dimen/div_m"
+                    android:paddingStart="@dimen/div_m"
+                    android:paddingTop="@dimen/div_l"
+                    android:scrollbars="none"
+                    android:tag="1"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/text_sz_xs" />
+
+                <ProgressBar
+                    android:id="@+id/loading1"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/div_l"
+                android:layout_weight="1">
+
+                <com.diversitii.dcapp.ResizingTextView
+                    android:id="@+id/topicBtn2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/yellow_rounded_rectangle"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:onClick="onClick"
+                    android:paddingBottom="@dimen/div_l"
+                    android:paddingEnd="@dimen/div_m"
+                    android:paddingLeft="@dimen/div_m"
+                    android:paddingRight="@dimen/div_m"
+                    android:paddingStart="@dimen/div_m"
+                    android:paddingTop="@dimen/div_l"
+                    android:scrollbars="none"
+                    android:tag="2"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/text_sz_xs" />
+
+                <ProgressBar
+                    android:id="@+id/loading2"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_game_score"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/width_btn_nav"
+            android:layout_above="@+id/ll_mode"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/enterNameText"
+            android:layout_marginBottom="@dimen/div_s"
+            android:background="@drawable/border_gold"
+            android:gravity="center"
+            android:paddingBottom="@dimen/div_s"
+            android:paddingEnd="@dimen/div_xxl"
+            android:paddingLeft="@dimen/div_xxl"
+            android:paddingRight="@dimen/div_xxl"
+            android:paddingStart="@dimen/div_xxl"
+            android:paddingTop="@dimen/div_s"
+            android:text="@string/default_game_score"
+            android:textColor="@color/gold"
+            android:textSize="@dimen/text_sz_m"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/enterNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/confirmBtn"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/white_rounded_rectangle"
+            android:hint="@string/enter_name"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/div_xs"
+            android:paddingEnd="@dimen/div_xl"
+            android:paddingLeft="@dimen/div_xl"
+            android:paddingRight="@dimen/div_xl"
+            android:paddingStart="@dimen/div_xl"
+            android:paddingTop="@dimen/div_xs"
+            android:textSize="@dimen/text_sz_xs"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_points_value"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/width_btn_nav"
+            android:layout_above="@+id/ll_mode"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/enterNameText"
+            android:layout_marginBottom="@dimen/div_s"
+            android:background="@drawable/border_gold"
+            android:gravity="center"
+            android:paddingBottom="@dimen/div_s"
+            android:paddingEnd="@dimen/div_xxl"
+            android:paddingLeft="@dimen/div_xxl"
+            android:paddingRight="@dimen/div_xxl"
+            android:paddingStart="@dimen/div_xxl"
+            android:paddingTop="@dimen/div_s"
+            android:text="@string/default_points_value"
+            android:textColor="@color/gold"
+            android:textSize="@dimen/text_sz_m"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/confirmBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_mode"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:onClick="onClick"
+            android:padding="@dimen/div_xxxs"
+            android:text="@string/confirm"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_sz_xs"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_cat_controller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/confirmBtn"
+            android:layout_margin="@dimen/div_xs"
+            android:layout_toEndOf="@id/confirmBtn"
+            android:layout_toLeftOf="@id/tv_points_value"
+            android:layout_toRightOf="@id/confirmBtn"
+            android:layout_toStartOf="@id/tv_points_value"
+            android:background="@drawable/yellow_less_rounded_rectangle"
+            android:gravity="center"
+            android:padding="@dimen/div_xs"
+            android:text="@string/cc"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_sz_s" />
+
+        <LinearLayout
+            android:id="@+id/ll_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll_bottom"
+            android:layout_marginBottom="@dimen/div_xxs"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/restartGameBtn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/width_btn_nav"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/div_xs"
+                android:layout_marginRight="@dimen/div_xs"
+                android:layout_weight="1"
+                android:contentDescription="@string/descr_restart"
+                android:onClick="onClick"
+                android:padding="@dimen/div_tiny"
+                android:scaleType="fitCenter"
+                android:src="@drawable/restart_game" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/div_xs"
+                android:layout_marginStart="@dimen/div_xs"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/multiplayerBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_btn_nav"
+                    android:contentDescription="@string/descr_multiplayer"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/multiplayer" />
+
+                <ImageView
+                    android:id="@+id/singlePlayerBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_btn_nav"
+                    android:contentDescription="@string/descr_single_player"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/single_player" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/div_s"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/previousBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/descr_prev"
+                android:onClick="onClick"
+                android:padding="@dimen/div_xxs"
+                android:scaleType="fitCenter"
+                android:src="@drawable/previous" />
+
+            <ImageView
+                android:id="@+id/playBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/descr_play"
+                android:onClick="onClick"
+                android:paddingEnd="@dimen/div_xl"
+                android:paddingLeft="@dimen/div_xl"
+                android:paddingRight="@dimen/div_xl"
+                android:paddingStart="@dimen/div_xl"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dicecolour_compressed" />
+
+            <ImageView
+                android:id="@+id/nextBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/descr_next"
+                android:onClick="onClick"
+                android:padding="@dimen/div_xxs"
+                android:scaleType="fitCenter"
+                android:src="@drawable/forward" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/categories_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</FrameLayout>

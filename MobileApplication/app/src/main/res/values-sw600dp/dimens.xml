@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_margin_vert">24dp</dimen>
+    <dimen name="activity_margin_horiz">24dp</dimen>
+
+    <dimen name="radius_btn_xxs">10dp</dimen>
+    <dimen name="radius_btn_xs">15dp</dimen>
+    <dimen name="radius_btn_s">20dp</dimen>
+    <dimen name="radius_btn_m">35dp</dimen>
+    <dimen name="radius_btn_l">40dp</dimen>
+
+    <dimen name="border">5dp</dimen>
+
+    <dimen name="div_tiny">2dp</dimen>
+    <dimen name="div_xxxs">6dp</dimen>
+    <dimen name="div_xxs">9dp</dimen>
+    <dimen name="div_xs">11dp</dimen>
+    <dimen name="div_s">14dp</dimen>
+    <dimen name="div_m">16dp</dimen>
+    <dimen name="div_l">21dp</dimen>
+    <dimen name="div_xl">26dp</dimen>
+    <dimen name="div_xxl">31dp</dimen>
+    <dimen name="div_xxxl">36dp</dimen>
+    <dimen name="div_huge">45dp</dimen>
+    <dimen name="div_xhuge">60dp</dimen>
+
+    <dimen name="list_separator">3.0dp</dimen>
+    <dimen name="list_separator_l">5.0dp</dimen>
+    <dimen name="gv_spacing_vert">15dp</dimen>
+    <dimen name="gv_spacing_horiz">15dp</dimen>
+    <dimen name="neg_gv_spacing_horiz">-30dp</dimen>
+
+    <dimen name="width_oval_btn">30dp</dimen>
+    <dimen name="width_player_icon">75dp</dimen>
+    <dimen name="half_width_btn_nav">30dp</dimen>
+    <dimen name="width_btn_nav">60dp</dimen>
+    <dimen name="width_check">70dp</dimen>
+    <dimen name="width_settings">130dp</dimen>
+    <dimen name="width_half">300dp</dimen>
+
+    <dimen name="seek_bar">90dp</dimen>
+
+    <dimen name="height_report_title">45dp</dimen>
+    <dimen name="height_title">90dp</dimen>
+    <dimen name="land_height_header">185dp</dimen>
+    <dimen name="height_header">200dp</dimen>
+    <dimen name="height_header_less_title">135dp</dimen>
+    <dimen name="height_footer">190dp</dimen>
+
+    <dimen name="text_sz_xxxs">10sp</dimen>
+    <dimen name="text_sz_xxs">14sp</dimen>
+    <dimen name="text_sz_xs">18sp</dimen>
+    <dimen name="text_sz_s">22sp</dimen>
+    <dimen name="text_sz_m">26sp</dimen>
+    <dimen name="text_sz_l">30sp</dimen>
+    <dimen name="text_sz_xl">34sp</dimen>
+    <dimen name="text_sz_xxl">40sp</dimen>
+    <dimen name="text_sz_xxxl">44sp</dimen>
+</resources>

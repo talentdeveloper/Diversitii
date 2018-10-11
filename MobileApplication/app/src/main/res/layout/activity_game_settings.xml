@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:paddingBottom="@dimen/activity_margin_vert"
+    android:paddingEnd="@dimen/activity_margin_horiz"
+    android:paddingLeft="@dimen/activity_margin_horiz"
+    android:paddingRight="@dimen/activity_margin_horiz"
+    android:paddingStart="@dimen/activity_margin_horiz"
+    android:paddingTop="@dimen/activity_margin_vert">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/div_xs"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/div_xxs">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_game_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/div_xxs"
+                    android:layout_marginEnd="@dimen/div_s"
+                    android:layout_marginLeft="@dimen/div_s"
+                    android:layout_marginRight="@dimen/div_s"
+                    android:layout_marginStart="@dimen/div_s"
+                    android:background="@drawable/border_gold"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/div_xl"
+                    android:paddingEnd="@dimen/div_xxs"
+                    android:paddingLeft="@dimen/div_xxs"
+                    android:paddingRight="@dimen/div_xxs"
+                    android:paddingStart="@dimen/div_xxs"
+                    android:paddingTop="@dimen/div_xl"
+                    android:text="@string/default_game_score"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/text_sz_l"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/game_score"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/text_sz_xs"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_game_lives"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/div_xxs"
+                    android:layout_marginEnd="@dimen/div_s"
+                    android:layout_marginLeft="@dimen/div_s"
+                    android:layout_marginRight="@dimen/div_s"
+                    android:layout_marginStart="@dimen/div_s"
+                    android:background="@drawable/border_red"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/div_xl"
+                    android:paddingEnd="@dimen/div_xxs"
+                    android:paddingLeft="@dimen/div_xxs"
+                    android:paddingRight="@dimen/div_xxs"
+                    android:paddingStart="@dimen/div_xxs"
+                    android:paddingTop="@dimen/div_xl"
+                    android:text="@string/default_game_lives"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/text_sz_l"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/game_lives"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/text_sz_xs"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_points_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/div_xxs"
+                    android:layout_marginEnd="@dimen/div_s"
+                    android:layout_marginLeft="@dimen/div_s"
+                    android:layout_marginRight="@dimen/div_s"
+                    android:layout_marginStart="@dimen/div_s"
+                    android:background="@drawable/border_gold"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/div_xl"
+                    android:paddingEnd="@dimen/div_xxs"
+                    android:paddingLeft="@dimen/div_xxs"
+                    android:paddingRight="@dimen/div_xxs"
+                    android:paddingStart="@dimen/div_xxs"
+                    android:paddingTop="@dimen/div_xl"
+                    android:text="@string/default_points_value"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/text_sz_l"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/points_value"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/text_sz_xs"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_timer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/div_xxs"
+                    android:layout_marginEnd="@dimen/div_s"
+                    android:layout_marginLeft="@dimen/div_s"
+                    android:layout_marginRight="@dimen/div_s"
+                    android:layout_marginStart="@dimen/div_s"
+                    android:background="@drawable/border_white"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/div_xl"
+                    android:paddingEnd="@dimen/div_xxs"
+                    android:paddingLeft="@dimen/div_xxs"
+                    android:paddingRight="@dimen/div_xxs"
+                    android:paddingStart="@dimen/div_xxs"
+                    android:paddingTop="@dimen/div_xl"
+                    android:text="@string/default_timer"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_sz_l"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/div_s"
+                    android:gravity="center"
+                    android:text="@string/timer"
+                    android:textColor="@color/gold"
+                    android:textSize="@dimen/text_sz_xs"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_top"
+            android:layout_marginTop="@dimen/div_m"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_game_score"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/div_xxs"
+                android:layout_marginRight="@dimen/div_xxs"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_rounded_rectangle"
+                android:gravity="center"
+                android:maxLines="2"
+                android:minLines="2"
+                android:onClick="onClick"
+                android:padding="@dimen/div_xl"
+                android:text="@string/game_score"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_sz_xs" />
+
+            <Button
+                android:id="@+id/btn_points_value"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/div_xxs"
+                android:layout_marginStart="@dimen/div_xxs"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_rounded_rectangle"
+                android:gravity="center"
+                android:maxLines="2"
+                android:minLines="2"
+                android:onClick="onClick"
+                android:padding="@dimen/div_xl"
+                android:text="@string/points_value"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_sz_xs" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/ll_middle"
+            android:layout_marginTop="@dimen/div_xs"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_game_lives"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/div_xxs"
+                    android:layout_marginRight="@dimen/div_xxs"
+                    android:background="@drawable/yellow_rounded_rectangle"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:onClick="onClick"
+                    android:padding="@dimen/div_xl"
+                    android:text="@string/game_lives"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/text_sz_xs" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/div_xxs"
+                    android:layout_marginTop="@dimen/div_xs"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/descr_owl"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/owl_compressed" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_timer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/div_xxs"
+                    android:layout_marginStart="@dimen/div_xxs"
+                    android:background="@drawable/yellow_rounded_rectangle"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:onClick="onClick"
+                    android:paddingBottom="@dimen/div_m"
+                    android:paddingEnd="@dimen/div_xxxl"
+                    android:paddingLeft="@dimen/div_xxxl"
+                    android:paddingRight="@dimen/div_xxxl"
+                    android:paddingStart="@dimen/div_xxxl"
+                    android:paddingTop="@dimen/div_m"
+                    android:text="@string/timer"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_sz_xs" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/div_m"
+                    android:layout_marginLeft="@dimen/div_l"
+                    android:layout_marginRight="@dimen/div_m"
+                    android:layout_marginStart="@dimen/div_l">
+
+                    <Button
+                        android:id="@+id/btn_game_rules"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/div_s"
+                        android:background="@drawable/red_rectangle_rounded_corners"
+                        android:minLines="2"
+                        android:onClick="onClick"
+                        android:paddingBottom="@dimen/div_m"
+                        android:paddingEnd="@dimen/div_xs"
+                        android:paddingLeft="@dimen/div_xs"
+                        android:paddingRight="@dimen/div_xs"
+                        android:paddingStart="@dimen/div_xs"
+                        android:paddingTop="@dimen/div_m"
+                        android:text="@string/game_rules"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_sz_s" />
+
+                    <Button
+                        android:id="@+id/btn_game_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/btn_game_rules"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignStart="@+id/btn_game_rules"
+                        android:layout_below="@id/btn_game_rules"
+                        android:layout_marginBottom="@dimen/width_btn_nav"
+                        android:layout_marginTop="@dimen/div_s"
+                        android:background="@drawable/red_rectangle_rounded_corners"
+                        android:minLines="2"
+                        android:paddingBottom="@dimen/div_m"
+                        android:paddingEnd="@dimen/div_xs"
+                        android:paddingLeft="@dimen/div_xs"
+                        android:paddingRight="@dimen/div_xs"
+                        android:paddingStart="@dimen/div_xs"
+                        android:paddingTop="@dimen/div_m"
+                        android:text="@string/game_mode_default"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_sz_xs" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/nextBtn"
+            android:layout_marginLeft="@dimen/div_l"
+            android:layout_marginStart="@dimen/div_l"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/nextBtn"
+            android:layout_width="@dimen/width_btn_nav"
+            android:layout_height="@dimen/width_btn_nav"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/div_m"
+            android:layout_marginRight="@dimen/div_m"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/descr_next"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/forward" />
+    </RelativeLayout>
+
+</FrameLayout>

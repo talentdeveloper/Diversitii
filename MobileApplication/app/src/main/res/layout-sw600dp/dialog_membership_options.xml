@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent">
+
+    <ProgressBar
+        android:id="@+id/screen_wait"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/screen_main"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/blue_rectangle_rounded_corners"
+        android:paddingBottom="@dimen/activity_margin_vert"
+        android:paddingEnd="@dimen/activity_margin_horiz"
+        android:paddingLeft="@dimen/activity_margin_horiz"
+        android:paddingRight="@dimen/activity_margin_horiz"
+        android:paddingStart="@dimen/activity_margin_horiz"
+        android:paddingTop="@dimen/activity_margin_vert">
+
+        <LinearLayout
+            android:id="@+id/layout_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/div_s"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/div_m"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/div_xxs">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/div_m"
+                    android:layout_marginRight="@dimen/div_m"
+                    android:background="@drawable/yellow_less_rounded_rectangle"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/div_s"
+                    android:paddingEnd="@dimen/div_xl"
+                    android:paddingLeft="@dimen/div_xl"
+                    android:paddingRight="@dimen/div_xl"
+                    android:paddingStart="@dimen/div_xl"
+                    android:paddingTop="@dimen/div_s">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/notifications_lc"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_sz_xxs"
+                        android:textStyle="bold" />
+
+                    <ScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_notifications"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minLines="5"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_sz_xxs" />
+                    </ScrollView>
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/offer_progress"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/div_xxxl" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_back"
+            android:layout_below="@+id/layout_top"
+            android:layout_marginEnd="@dimen/div_m"
+            android:layout_marginLeft="@dimen/div_m"
+            android:layout_marginRight="@dimen/div_m"
+            android:layout_marginStart="@dimen/div_m"
+            android:layout_marginTop="@dimen/div_s"
+            android:background="@drawable/red_rectangle_rounded_corners"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/div_xl"
+            android:paddingEnd="@dimen/div_m"
+            android:paddingLeft="@dimen/div_m"
+            android:paddingRight="@dimen/div_m"
+            android:paddingStart="@dimen/div_m"
+            android:paddingTop="@dimen/div_m">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/div_s"
+                android:gravity="center"
+                android:text="@string/membership_options"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/text_sz_l"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/lv_cats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="@dimen/list_separator_l" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/half_width_btn_nav"
+            android:layout_height="@dimen/half_width_btn_nav"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/descr_prev"
+            android:scaleType="fitXY"
+            android:src="@drawable/previous" />
+    </RelativeLayout>
+</FrameLayout>

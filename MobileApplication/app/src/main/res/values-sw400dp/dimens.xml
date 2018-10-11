@@ -1,0 +1,54 @@
+<resources>
+    <dimen name="activity_margin_vert">24dp</dimen>
+    <dimen name="activity_margin_horiz">24dp</dimen>
+
+    <dimen name="seek_bar">8dp</dimen>
+
+    <dimen name="radius_btn_xs">15dp</dimen>
+    <dimen name="radius_btn_s">25dp</dimen>
+    <dimen name="radius_btn_m">37dp</dimen>
+    <dimen name="radius_btn_l">53dp</dimen>
+
+    <dimen name="div_neg_xxxl">-45dp</dimen>
+    <dimen name="div_neg_xxl">-25dp</dimen>
+    <dimen name="div_tiny">2dp</dimen>
+    <dimen name="div_xxxs">3dp</dimen>
+    <dimen name="div_xxs">6dp</dimen>
+    <dimen name="div_xs">8dp</dimen>
+    <dimen name="div_s">10dp</dimen>
+    <dimen name="div_m">12dp</dimen>
+    <dimen name="div_l">17dp</dimen>
+    <dimen name="div_xl">23dp</dimen>
+    <dimen name="div_xxl">28dp</dimen>
+    <dimen name="div_xxxl">33dp</dimen>
+    <dimen name="div_huge">50dp</dimen>
+
+    <dimen name="list_separator">4.0dp</dimen>
+    <dimen name="list_separator_l">5.0dp</dimen>
+    <dimen name="gv_spacing_vert">15dp</dimen>
+    <dimen name="gv_spacing_horiz">10dp</dimen>
+    <dimen name="neg_gv_spacing_horiz">-30dp</dimen>
+
+    <dimen name="width_oval_btn">30dp</dimen>
+    <dimen name="width_player_icon">75dp</dimen>
+    <dimen name="half_width_btn_nav">32dp</dimen>
+    <dimen name="width_btn_nav">63dp</dimen>
+    <dimen name="width_check">45dp</dimen>
+    <dimen name="width_settings">180dp</dimen>
+    <dimen name="width_half">260dp</dimen>
+
+    <dimen name="height_report_title">57dp</dimen>
+    <dimen name="height_title">50dp</dimen>
+    <dimen name="land_height_header">150dp</dimen>
+    <dimen name="height_header">180dp</dimen>
+    <dimen name="height_header_less_title">130dp</dimen>
+    <dimen name="height_footer">170dp</dimen>
+
+    <dimen name="text_sz_xxxs">10sp</dimen>
+    <dimen name="text_sz_xxs">14sp</dimen>
+    <dimen name="text_sz_xs">18sp</dimen>
+    <dimen name="text_sz_s">22sp</dimen>
+    <dimen name="text_sz_m">26sp</dimen>
+    <dimen name="text_sz_l">30sp</dimen>
+    <dimen name="text_sz_xl">34sp</dimen>
+</resources>

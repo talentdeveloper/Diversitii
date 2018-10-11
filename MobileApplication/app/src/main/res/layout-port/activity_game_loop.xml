@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:paddingBottom="@dimen/activity_margin_vert"
+    android:paddingEnd="@dimen/activity_margin_horiz"
+    android:paddingLeft="@dimen/activity_margin_horiz"
+    android:paddingRight="@dimen/activity_margin_horiz"
+    android:paddingStart="@dimen/activity_margin_horiz"
+    android:paddingTop="@dimen/activity_margin_vert">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/div_m"
+                android:layout_marginStart="@dimen/div_m"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/descr_player_icon"
+                android:paddingEnd="@dimen/div_tiny"
+                android:paddingLeft="@dimen/div_l"
+                android:paddingRight="@dimen/div_tiny"
+                android:paddingStart="@dimen/div_l"
+                android:paddingTop="@dimen/div_l"
+                android:scaleType="fitCenter"
+                android:src="@drawable/player_icon_game_port" />
+
+            <TextView
+                android:id="@+id/tv_player_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/div_m"
+                android:layout_marginStart="@dimen/div_m"
+                android:paddingEnd="@dimen/div_tiny"
+                android:paddingLeft="@dimen/div_l"
+                android:paddingRight="@dimen/div_tiny"
+                android:paddingStart="@dimen/div_l"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/text_sz_xs"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/dcHeading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/div_xxs"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dcheading" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.diversitii.dcapp.ResizingTextView
+                android:id="@+id/topicScoreScoreText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/div_m"
+                android:layout_marginLeft="@dimen/div_m"
+                android:layout_marginRight="@dimen/div_m"
+                android:layout_marginStart="@dimen/div_m"
+                android:background="@drawable/yellow_oval"
+                android:gravity="center"
+                android:maxLines="1"
+                android:minLines="1"
+                android:padding="@dimen/div_l"
+                android:scrollbars="none"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_sz_xs"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/div_xs"
+                android:text="@string/topic_score"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/text_sz_xxs"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/timerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/div_xs"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_sz_l"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/questionsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tl_questions"
+        android:layout_below="@id/ll_top"
+        android:layout_marginBottom="@dimen/div_xs"
+        android:layout_marginTop="@dimen/div_xs"
+        android:padding="@dimen/div_m"
+        android:scrollbars="vertical"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_sz_xs" />
+
+    <TableLayout
+        android:id="@+id/tl_questions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_bottom"
+        android:measureWithLargestChild="true"
+        android:orientation="vertical">
+
+        <TableRow
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <com.diversitii.dcapp.ResizingTextView
+                android:id="@+id/answerText1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/div_xxxs"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_rounded_rectangle"
+                android:gravity="center"
+                android:maxLines="2"
+                android:minLines="2"
+                android:onClick="onClick"
+                android:padding="@dimen/div_l"
+                android:scrollbars="none"
+                android:tag="0"
+                android:textSize="@dimen/text_sz_xxs" />
+
+            <com.diversitii.dcapp.ResizingTextView
+                android:id="@+id/answerText2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/div_xxxs"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_rounded_rectangle"
+                android:gravity="center"
+                android:maxLines="2"
+                android:minLines="2"
+                android:onClick="onClick"
+                android:padding="@dimen/div_l"
+                android:scrollbars="none"
+                android:tag="1"
+                android:textSize="@dimen/text_sz_xxs" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <com.diversitii.dcapp.ResizingTextView
+                android:id="@+id/answerText3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/div_xxxs"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_rounded_rectangle"
+                android:gravity="center"
+                android:maxLines="2"
+                android:minLines="2"
+                android:onClick="onClick"
+                android:padding="@dimen/div_l"
+                android:scrollbars="none"
+                android:tag="2"
+                android:textSize="@dimen/text_sz_xxs" />
+
+            <com.diversitii.dcapp.ResizingTextView
+                android:id="@+id/answerText4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/div_xxxs"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_rounded_rectangle"
+                android:gravity="center"
+                android:maxLines="2"
+                android:minLines="2"
+                android:onClick="onClick"
+                android:padding="@dimen/div_l"
+                android:scrollbars="none"
+                android:tag="3"
+                android:textSize="@dimen/text_sz_xxs" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <com.diversitii.dcapp.ResizingTextView
+                android:id="@+id/answerText5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/div_xxxs"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_rounded_rectangle"
+                android:gravity="center"
+                android:maxLines="2"
+                android:minLines="2"
+                android:onClick="onClick"
+                android:padding="@dimen/div_l"
+                android:scrollbars="none"
+                android:tag="4"
+                android:textSize="@dimen/text_sz_xxs" />
+
+            <com.diversitii.dcapp.ResizingTextView
+                android:id="@+id/answerText6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/div_xxxs"
+                android:layout_weight="1"
+                android:background="@drawable/yellow_rounded_rectangle"
+                android:gravity="center"
+                android:maxLines="2"
+                android:minLines="2"
+                android:onClick="onClick"
+                android:padding="@dimen/div_l"
+                android:scrollbars="none"
+                android:tag="5"
+                android:textSize="@dimen/text_sz_xxs" />
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/div_l">
+
+        <TextView
+            android:id="@+id/tv_questions_out_of"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/div_s"
+            android:layout_marginStart="@dimen/div_s"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_sz_xs" />
+
+    </RelativeLayout>
+</RelativeLayout>

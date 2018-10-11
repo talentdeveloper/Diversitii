@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/div_s"
+    android:background="@drawable/blue_rectangle_rounded_corners"
+    android:padding="@dimen/div_l">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/div_s">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".6" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_game_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/div_s"
+                android:layout_marginEnd="@dimen/div_l"
+                android:layout_marginLeft="@dimen/div_l"
+                android:layout_marginRight="@dimen/div_l"
+                android:layout_marginStart="@dimen/div_l"
+                android:background="@drawable/border_gold"
+                android:gravity="center"
+                android:padding="@dimen/div_s"
+                android:text="@string/default_game_score"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/text_sz_xxxl"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/game_score"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/text_sz_s"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_game_lives"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/div_s"
+                android:layout_marginEnd="@dimen/div_l"
+                android:layout_marginLeft="@dimen/div_l"
+                android:layout_marginRight="@dimen/div_l"
+                android:layout_marginStart="@dimen/div_l"
+                android:background="@drawable/border_red"
+                android:gravity="center"
+                android:padding="@dimen/div_s"
+                android:text="@string/default_game_lives"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/text_sz_xxxl"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/game_lives"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/text_sz_s"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_points_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/div_s"
+                android:layout_marginEnd="@dimen/div_l"
+                android:layout_marginLeft="@dimen/div_l"
+                android:layout_marginRight="@dimen/div_l"
+                android:layout_marginStart="@dimen/div_l"
+                android:background="@drawable/border_gold"
+                android:gravity="center"
+                android:padding="@dimen/div_s"
+                android:text="@string/default_points_value"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/text_sz_xxxl"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/points_value"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/text_sz_s"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/div_s"
+                android:layout_marginEnd="@dimen/div_l"
+                android:layout_marginLeft="@dimen/div_l"
+                android:layout_marginRight="@dimen/div_l"
+                android:layout_marginStart="@dimen/div_l"
+                android:background="@drawable/border_white"
+                android:gravity="center"
+                android:padding="@dimen/div_s"
+                android:text="@string/default_timer"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_sz_xxxl"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/timer"
+                android:textColor="@color/gold"
+                android:textSize="@dimen/text_sz_s"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".6">
+
+            <ImageView
+                android:id="@+id/tv_cancel"
+                android:layout_width="@dimen/width_btn_nav"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/descr_cancel"
+                android:paddingBottom="@dimen/div_s"
+                android:paddingEnd="@dimen/div_xxs"
+                android:paddingLeft="@dimen/div_s"
+                android:paddingRight="@dimen/div_xxs"
+                android:paddingStart="@dimen/div_s"
+                android:scaleType="fitEnd"
+                android:src="@drawable/cancel" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_top"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_game_score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/div_s"
+            android:layout_weight="1"
+            android:background="@drawable/yellow_rounded_rectangle"
+            android:onClick="onClick"
+            android:padding="@dimen/div_xl"
+            android:text="@string/game_score"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_sz_m"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_game_lives"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/div_s"
+            android:layout_weight="1"
+            android:background="@drawable/yellow_rounded_rectangle"
+            android:onClick="onClick"
+            android:padding="@dimen/div_xl"
+            android:text="@string/game_lives"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_sz_m"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_points_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/div_s"
+            android:layout_weight="1"
+            android:background="@drawable/yellow_rounded_rectangle"
+            android:onClick="onClick"
+            android:padding="@dimen/div_xl"
+            android:text="@string/points_value"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_sz_m"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/ll_middle"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/div_s"
+            android:layout_weight="1.7"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/descr_owl"
+            android:scaleType="fitCenter"
+            android:src="@drawable/owl" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_game_mode"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/btn_game_mode"
+                android:layout_marginBottom="@dimen/div_huge"
+                android:layout_marginEnd="@dimen/div_m"
+                android:layout_marginRight="@dimen/div_m"
+                android:layout_marginTop="@dimen/div_s"
+                android:background="@drawable/yellow_rounded_rectangle"
+                android:onClick="onClick"
+                android:padding="@dimen/div_xl"
+                android:text="@string/timer"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_sz_xl" />
+
+            <Button
+                android:id="@+id/btn_game_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/div_s"
+                android:background="@drawable/red_rectangle_rounded_corners"
+                android:minLines="2"
+                android:paddingBottom="@dimen/div_xs"
+                android:paddingEnd="@dimen/div_xl"
+                android:paddingLeft="@dimen/div_xl"
+                android:paddingRight="@dimen/div_xl"
+                android:paddingStart="@dimen/div_xl"
+                android:paddingTop="@dimen/div_xs"
+                android:text="@string/game_mode_default"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_sz_xl" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/btn_game_rules"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/div_huge"
+                android:layout_marginLeft="@dimen/div_s"
+                android:layout_marginRight="@dimen/div_huge"
+                android:layout_marginStart="@dimen/div_s"
+                android:background="@drawable/red_rectangle_rounded_corners"
+                android:maxLines="2"
+                android:minLines="2"
+                android:onClick="onClick"
+                android:padding="@dimen/div_xl"
+                android:text="@string/game_rules"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_sz_xl" />
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignLeft="@+id/btn_game_rules"
+                android:layout_alignStart="@+id/btn_game_rules"
+                android:layout_below="@+id/btn_game_rules"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/div_l"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/charcoal_rounded_rectangle"
+    android:padding="@dimen/div_xxxs">
+
+    <TextView
+        android:id="@+id/tv_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="@dimen/div_m"
+        android:layout_marginStart="@dimen/div_m"
+        android:layout_toLeftOf="@+id/btn_on"
+        android:layout_toStartOf="@+id/btn_on"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_sz_xxs"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/btn_on"
+        android:layout_width="@dimen/width_oval_btn"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_item"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/div_xs"
+        android:layout_marginRight="@dimen/div_xs"
+        android:layout_toLeftOf="@+id/btn_off"
+        android:layout_toStartOf="@+id/btn_off"
+        android:contentDescription="@string/on"
+        android:src="@drawable/oval_green" />
+
+    <ImageView
+        android:id="@+id/btn_off"
+        android:layout_width="@dimen/width_oval_btn"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_item"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/div_m"
+        android:layout_marginRight="@dimen/div_m"
+        android:contentDescription="@string/off"
+        android:src="@drawable/oval_dark_red" />
+</RelativeLayout>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_margin_vert"
+    android:paddingEnd="@dimen/activity_margin_horiz"
+    android:paddingLeft="@dimen/activity_margin_horiz"
+    android:paddingRight="@dimen/activity_margin_horiz"
+    android:paddingStart="@dimen/activity_margin_horiz"
+    android:paddingTop="@dimen/activity_margin_vert">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/microphone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/descr_mic"
+            android:padding="@dimen/div_xxs"
+            android:scaleType="fitCenter"
+            android:src="@drawable/white_microphone" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_header_less_title"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/dcheading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/div_xxs"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dcheading" />
+
+                <ImageView
+                    android:id="@+id/whitePalmtree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/descr_palm"
+                    android:padding="@dimen/div_xxs"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/whitepalmtree" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/reportBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_title"
+                android:contentDescription="@string/descr_report"
+                android:padding="@dimen/div_xxs"
+                android:scaleType="fitStart"
+                android:src="@drawable/report" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/div_xs">
+
+        <ImageButton
+            android:id="@+id/previousBtn"
+            android:layout_width="@dimen/width_btn_nav"
+            android:layout_height="@dimen/width_btn_nav"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="bottom"
+            android:background="@null"
+            android:contentDescription="@string/descr_prev"
+            android:onClick="onClick"
+            android:scaleType="fitStart"
+            android:src="@drawable/previous" />
+
+        <LinearLayout
+            android:id="@+id/reportBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/previousBtn"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/previousBtn"
+            android:layout_toRightOf="@id/previousBtn"
+            android:background="@drawable/red_rectangle"
+            android:orientation="vertical"
+            android:padding="@dimen/div_l">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/spellingBox"
+                    android:layout_width="@dimen/width_check"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/spellingErrorBtn"
+                    android:layout_alignTop="@+id/spellingErrorBtn"
+                    android:layout_marginEnd="@dimen/div_l"
+                    android:layout_marginRight="@dimen/div_l"
+                    android:background="@drawable/check_circle"
+                    app:buttonTint="@android:color/transparent" />
+
+                <Button
+                    android:id="@+id/spellingErrorBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="@dimen/div_xs"
+                    android:layout_toEndOf="@id/spellingBox"
+                    android:layout_toRightOf="@id/spellingBox"
+                    android:background="@drawable/yellow_rounded_rectangle"
+                    android:padding="@dimen/div_xxs"
+                    android:text="@string/spelling_error"
+                    android:textSize="@dimen/text_sz_xxs"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/wrongAnswerBox"
+                    android:layout_width="@dimen/width_check"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/wrongAnswerBtn"
+                    android:layout_alignTop="@+id/wrongAnswerBtn"
+                    android:layout_marginEnd="@dimen/div_l"
+                    android:layout_marginRight="@dimen/div_l"
+                    android:background="@drawable/check_circle"
+                    app:buttonTint="@android:color/transparent" />
+
+                <Button
+                    android:id="@+id/wrongAnswerBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/div_xs"
+                    android:layout_toEndOf="@id/wrongAnswerBox"
+                    android:layout_toRightOf="@id/wrongAnswerBox"
+                    android:background="@drawable/yellow_rounded_rectangle"
+                    android:padding="@dimen/div_xxs"
+                    android:text="@string/wrong_answer"
+                    android:textSize="@dimen/text_sz_xxs"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/wrongTopicBox"
+                    android:layout_width="@dimen/width_check"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/wrongTopicButton"
+                    android:layout_alignTop="@+id/wrongTopicButton"
+                    android:layout_marginEnd="@dimen/div_l"
+                    android:layout_marginRight="@dimen/div_l"
+                    android:background="@drawable/check_circle"
+                    app:buttonTint="@android:color/transparent" />
+
+                <Button
+                    android:id="@+id/wrongTopicButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/div_xs"
+                    android:layout_toEndOf="@id/wrongTopicBox"
+                    android:layout_toRightOf="@id/wrongTopicBox"
+                    android:background="@drawable/yellow_rounded_rectangle"
+                    android:padding="@dimen/div_xxs"
+                    android:text="@string/wrong_topic"
+                    android:textSize="@dimen/text_sz_xxs"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/otherBox"
+                    android:layout_width="@dimen/width_check"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/otherBtn"
+                    android:layout_alignTop="@+id/otherBtn"
+                    android:layout_marginEnd="@dimen/div_l"
+                    android:layout_marginRight="@dimen/div_l"
+                    android:background="@drawable/check_circle"
+                    app:buttonTint="@android:color/transparent" />
+
+                <Button
+                    android:id="@+id/otherBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/div_xs"
+                    android:layout_toEndOf="@id/otherBox"
+                    android:layout_toRightOf="@id/otherBox"
+                    android:background="@drawable/yellow_rounded_rectangle"
+                    android:padding="@dimen/div_xxs"
+                    android:text="@string/other_error"
+                    android:textSize="@dimen/text_sz_xxs"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/correctionsText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".75"
+                android:gravity="center"
+                android:text="@string/corrections"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_sz_m"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/correctionsCorrectionsText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/width_check"
+                android:layout_marginLeft="@dimen/width_check"
+                android:layout_marginRight="@dimen/width_check"
+                android:layout_marginStart="@dimen/width_check"
+                android:layout_weight="1"
+                android:background="@drawable/white_rounded_rectangle"
+                android:hint="@string/details_hint"
+                android:lines="1"
+                android:paddingBottom="@dimen/div_s"
+                android:paddingEnd="@dimen/div_l"
+                android:paddingLeft="@dimen/div_l"
+                android:paddingRight="@dimen/div_l"
+                android:paddingStart="@dimen/div_l"
+                android:paddingTop="@dimen/div_s"
+                android:textSize="@dimen/text_sz_xs" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/sendEmailBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/div_s"
+                    android:background="@drawable/blue_rectangle_rounded_corners"
+                    android:onClick="onClick"
+                    android:paddingEnd="@dimen/div_l"
+                    android:paddingLeft="@dimen/div_l"
+                    android:paddingRight="@dimen/div_l"
+                    android:paddingStart="@dimen/div_l"
+                    android:text="@string/send"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_sz_xs"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
