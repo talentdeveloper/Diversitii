@@ -102,6 +102,7 @@ public class MainActivity extends MusicActivity {
     private Topic[] mTopics;
 
     private boolean mIsPortrait;
+    private boolean mIsAndroidTV;
     private ViewPager mViewPager;
     private int mCurrentPage = 0;
     private static Timer mTimer;
@@ -182,12 +183,21 @@ public class MainActivity extends MusicActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mIsPortrait = Utils.isPortrait(this);
-        if (mIsPortrait) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        } else {
+        mIsAndroidTV = Utils.isAndroidTV(this);
+        if(mIsAndroidTV) {
+            //Toast.makeText(this, "This is Android TV", Toast.LENGTH_LONG).show();
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            setContentView(R.layout.activity_topic_selection);
+        } else {
+            if (Utils.isPortrait(this)) {
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            } else {
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+                //Toast.makeText(this,"This is Tablet",Toast.LENGTH_LONG).show();
+            }
+            setContentView(R.layout.activity_topic_selection);
         }
-        setContentView(R.layout.activity_topic_selection);
+
 
         mActivity = this;
 
@@ -253,7 +263,6 @@ public class MainActivity extends MusicActivity {
                                 .setText(mTopics[i].getTopicName());
                         findViewById(getResources().getIdentifier("@id/loading" + (i + 1), null, getPackageName()))
                                 .setVisibility(View.GONE);
-
                     } else {
                         // Get subtopic name
                         final int index = i;
@@ -1607,7 +1616,7 @@ public class MainActivity extends MusicActivity {
                     RelativeLayout layout;
                     Button openBtn;
                     ImageView cancelBtn;
-                    if (mIsPortrait) {
+                    if (mIsPortrait ) {
                         layout = rootView.findViewById(R.id.layout_topic_entry);
                         openBtn = rootView.findViewById(R.id.btn_open);
                         cancelBtn = rootView.findViewById(R.id.tv_cancel2);

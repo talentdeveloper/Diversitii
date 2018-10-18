@@ -18,9 +18,4 @@
     <style name="Animations.expand_start">
         <item name="android:windowEnterAnimation">@anim/expand_start</item>
     </style>
-
-    <style name="Animations.sliding">
-        <item name="android:windowEnterAnimation">@anim/sliding</item>
-    </style>
-
 </resources>

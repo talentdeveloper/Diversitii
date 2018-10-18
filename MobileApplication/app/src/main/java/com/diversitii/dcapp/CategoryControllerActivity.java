@@ -19,6 +19,7 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.diversitii.dcapp.billing.IabBroadcastReceiver;
 import com.diversitii.dcapp.billing.IabHelper;
@@ -257,13 +258,22 @@ public class CategoryControllerActivity extends MusicActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_controller);
-        if (Utils.isPortrait(this)) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-            initPortrait();
-        } else {
+        boolean mIsAndroidTV = Utils.isAndroidTV(this);
+        if(mIsAndroidTV) {
+            //Toast.makeText(this, "This is Android TV", Toast.LENGTH_LONG).show();
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
             initLandscape();
+        } else {
+            if (Utils.isPortrait(this)) {
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                initPortrait();
+            } else {
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+                initLandscape();
+                //Toast.makeText(this,"This is Tablet",Toast.LENGTH_LONG).show();
+            }
         }
+
 
         // Let device volume buttons control sound
         setVolumeControlStream(AudioManager.STREAM_MUSIC);

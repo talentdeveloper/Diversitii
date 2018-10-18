@@ -3,6 +3,7 @@ package com.diversitii.dcapp;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.UiModeManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -17,6 +18,10 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.app.UiModeManager;
+import android.content.res.Configuration;
+import android.content.Context;
+
 
 import com.diversitii.dcapp.billing.Purchase;
 import com.diversitii.dcapp.database.Answer;
@@ -46,6 +51,10 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
 
+
+
+import static android.content.Context.UI_MODE_SERVICE;
+
 /**
  * Utility methods.
  */
@@ -70,7 +79,14 @@ class Utils {
     static boolean isPortrait(Context context) {
         return context.getResources().getBoolean(R.bool.is_portrait);
     }
-
+    static boolean isAndroidTV(Context context){
+        boolean isAndroidTV;
+        int uiMode = context.getResources().getConfiguration().uiMode;
+        if ((uiMode & Configuration.UI_MODE_TYPE_MASK) == Configuration.UI_MODE_TYPE_TELEVISION) {
+            isAndroidTV = true;
+        }else isAndroidTV = false;
+        return isAndroidTV;
+    }
 //    /**
 //     * Returns true if no network (wifi or data) is available.
 //     *

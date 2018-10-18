@@ -45,12 +45,21 @@ public class GameLoopActivity extends MusicActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         boolean isPortrait = Utils.isPortrait(this);
-        if (isPortrait) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        } else {
+        boolean mIsAndroidTV = Utils.isAndroidTV(this);
+        if(mIsAndroidTV) {
+            //Toast.makeText(this, "This is Android TV", Toast.LENGTH_LONG).show();
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            setContentView(R.layout.activity_game_loop);
+        } else {
+            if (Utils.isPortrait(this)) {
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            } else {
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+                //Toast.makeText(this,"This is Tablet",Toast.LENGTH_LONG).show();
+            }
+            setContentView(R.layout.activity_game_loop);
         }
-        setContentView(R.layout.activity_game_loop);
+
 
         // Let device volume buttons control sound
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
