@@ -94,6 +94,8 @@ public class MainActivity extends MusicActivity {
     private static boolean mIsFirstLaunch = true;
 
     private int mSelectedPlayer; // ID of player name display in UI
+
+    private int mSelectedPlayer_landscape;
     private int mSelectedTopic = -1;
     private MediaPlayer mMediaPlayer = null; // For sound effects only
     private int mPlayer = -1; // counts from 0
@@ -113,6 +115,8 @@ public class MainActivity extends MusicActivity {
     private SparseIntArray mCategoriesByPacks;
     private int mAvailableCategoryPacks = 0;
     private static int mSelectedPackId;
+
+    private int index = 0;
 
     // In-app billing
     private static IabHelper mHelper;
@@ -924,7 +928,7 @@ public class MainActivity extends MusicActivity {
     @SuppressWarnings("ConstantConditions")
     private void initScorecard(int gameMode, boolean isPortrait) {
         int[] nameIds = Constants.getPlayerNameIds(isPortrait);
-        mSelectedPlayer = (mPlayer > -1) ? nameIds[mPlayer] : nameIds[0];
+        mSelectedPlayer = nameIds[0];
         SharedPreferences shprefs = getSharedPreferences(Constants.SHPREFS, Context.MODE_PRIVATE);
         int[] defaultNameIds = Constants.getPlayerDefaultNameIds(isPortrait);
 
@@ -1055,6 +1059,142 @@ public class MainActivity extends MusicActivity {
         }
     }
 
+    private void initScorecard_landscape(int gameMode, boolean isPortrait, int mSelectedPlayerlandscape) {
+        int[] nameIds = Constants.getPlayerNameIds(isPortrait);
+        mSelectedPlayer = mSelectedPlayerlandscape;
+        SharedPreferences shprefs = getSharedPreferences(Constants.SHPREFS, Context.MODE_PRIVATE);
+        int[] defaultNameIds = Constants.getPlayerDefaultNameIds(isPortrait);
+
+        // "Game score" and "points value"
+        int savedIndex = shprefs.getInt(Constants.SHPREFS_SETTINGS_SCORES, 0);
+        ((TextView) findViewById(R.id.tv_game_score)).setText(String.valueOf(Constants.SCORES_VALUES[savedIndex]));
+        savedIndex = shprefs.getInt(Constants.SHPREFS_SETTINGS_POINTS, 0);
+        ((TextView) findViewById(R.id.tv_points_value)).setText(String.valueOf(Constants.POINTS_VALUES[savedIndex]));
+
+        displayLives(gameMode, isPortrait);
+
+        if (isPortrait) {
+            if(mSelectedPlayer>R.id.playerName2)
+                mSelectedPlayer = R.id.playerName1;
+            // Show scores and indicate selected player
+            if (gameMode == Constants.SINGLE_PLAYER) {
+                // Show saved player name
+                ((Button) findViewById(R.id.playerName1)).setText(shprefs.getString(Constants.SHPREFS_NAME_SINGLE_PLAYER,
+                        getString(defaultNameIds[0])));
+                ((Button) findViewById(R.id.playerName2)).setText("");
+
+                // Highlight first player button
+                ((ImageView) findViewById(R.id.iv_player_icon1)).setImageResource(R.drawable.player_icon_port_selected);
+                ((ImageView) findViewById(R.id.iv_player_icon2)).setImageResource(0);
+                findViewById(R.id.playerName1).setBackgroundResource(R.drawable.player_panel_selected);
+                findViewById(R.id.playerName2).setBackgroundResource(0);
+
+                ((TextView) findViewById(R.id.score_text1)).setText(getScore(shprefs.getInt(Constants.SHPREFS_SCORE_SINGLE, 0)));
+                ((TextView) findViewById(R.id.score_text2)).setText("");
+
+                findViewById(R.id.multiplayerBtn).setVisibility(View.VISIBLE);
+                findViewById(R.id.singlePlayerBtn).setVisibility(View.INVISIBLE);
+            } else if (gameMode == Constants.MULTIPLAYER) {
+                // Show saved player names
+                for (int i = 0; i < Constants.getMaxPlayers(isPortrait); ++i) {
+                    ((Button) findViewById(nameIds[i])).setText(
+                            shprefs.getString(Constants.getPlayerNameStorageIds(isPortrait).get(nameIds[i]),
+                                    getString(defaultNameIds[i])));
+                }
+
+                selectPlayer(gameMode, isPortrait); // Highlight selected player button
+
+                if (Utils.hasPlayerName(this, 0)) {
+                    ((TextView) findViewById(R.id.score_text1)).setText(getScore(shprefs.getInt(Constants.SHPREFS_SCORE_PLAYER1, 0)));
+                } else {
+                    ((TextView) findViewById(R.id.score_text1)).setText("");
+                }
+                if (Utils.hasPlayerName(this, 1)) {
+                    ((TextView) findViewById(R.id.score_text2)).setText(getScore(shprefs.getInt(Constants.SHPREFS_SCORE_PLAYER2, 0)));
+                } else {
+                    ((TextView) findViewById(R.id.score_text2)).setText("");
+                }
+
+                findViewById(R.id.singlePlayerBtn).setVisibility(View.VISIBLE);
+                findViewById(R.id.multiplayerBtn).setVisibility(View.INVISIBLE);
+            } else {
+                Log.e(TAG, "Unhandled game mode");
+            }
+        } else { // Landscape orientation
+            // Show scores and indicate selected player
+            if (gameMode == Constants.SINGLE_PLAYER) {
+                // Show saved player name
+                ((Button) findViewById(R.id.playerName1)).setText(shprefs.getString(Constants.SHPREFS_NAME_SINGLE_PLAYER,
+                        getString(defaultNameIds[0])));
+                ((Button) findViewById(R.id.playerName2)).setText("");
+                ((Button) findViewById(R.id.playerName3)).setText("");
+                ((Button) findViewById(R.id.playerName4)).setText("");
+
+                // Highlight first player button
+                ((ImageView) findViewById(R.id.iv_player_icon1)).setImageResource(R.drawable.player_icon_land);
+                ((ImageView) findViewById(R.id.iv_player_icon2)).setImageResource(0);
+                ((ImageView) findViewById(R.id.iv_player_icon3)).setImageResource(0);
+                ((ImageView) findViewById(R.id.iv_player_icon4)).setImageResource(0);
+                findViewById(R.id.playerName1).setBackgroundResource(R.drawable.player_panel_selected);
+                findViewById(R.id.playerName2).setBackgroundResource(0);
+                findViewById(R.id.playerName3).setBackgroundResource(0);
+                findViewById(R.id.playerName4).setBackgroundResource(0);
+
+                ((TextView) findViewById(R.id.score_text1)).setText(getScore(shprefs.getInt(Constants.SHPREFS_SCORE_SINGLE, 0)));
+                ((TextView) findViewById(R.id.score_text2)).setText("");
+                ((TextView) findViewById(R.id.score_text3)).setText("");
+                ((TextView) findViewById(R.id.score_text4)).setText("");
+
+                findViewById(R.id.multiplayerBtn).setVisibility(View.VISIBLE);
+                findViewById(R.id.singlePlayerBtn).setVisibility(View.INVISIBLE);
+            } else if (gameMode == Constants.MULTIPLAYER) {
+                // Show saved player names
+                for (int i = 0; i < Constants.getMaxPlayers(isPortrait); ++i) {
+                    ((Button) findViewById(nameIds[i])).setText(
+                            shprefs.getString(Constants.getPlayerNameStorageIds(isPortrait).get(nameIds[i]),
+                                    getString(defaultNameIds[i])));
+                }
+
+                selectPlayer(gameMode, isPortrait); // Highlight selected player button
+
+                if (Utils.hasPlayerName(this, 0)) {
+                    ((TextView) findViewById(R.id.score_text1)).setText(getScore(shprefs.getInt(Constants.SHPREFS_SCORE_PLAYER1, 0)));
+                    ((TextView) findViewById(R.id.lives_text1)).setText(String.valueOf(shprefs.getInt(Constants.SHPREFS_LIVES_PLAYER1, Utils.getDefaultLives(shprefs))));
+                } else {
+                    ((TextView) findViewById(R.id.score_text1)).setText("");
+                    ((TextView) findViewById(R.id.lives_text1)).setText("");
+                }
+                if (Utils.hasPlayerName(this, 1)) {
+                    ((TextView) findViewById(R.id.score_text2)).setText(getScore(shprefs.getInt(Constants.SHPREFS_SCORE_PLAYER2, 0)));
+                    ((TextView) findViewById(R.id.lives_text2)).setText(String.valueOf(shprefs.getInt(Constants.SHPREFS_LIVES_PLAYER2, Utils.getDefaultLives(shprefs))));
+                } else {
+                    ((TextView) findViewById(R.id.score_text2)).setText("");
+                    ((TextView) findViewById(R.id.lives_text2)).setText("");
+                }
+                if (Utils.hasPlayerName(this, 2)) {
+                    ((TextView) findViewById(R.id.score_text3)).setText(getScore(shprefs.getInt(Constants.SHPREFS_SCORE_PLAYER3, 0)));
+                    ((TextView) findViewById(R.id.lives_text3)).setText(String.valueOf(shprefs.getInt(Constants.SHPREFS_LIVES_PLAYER3, Utils.getDefaultLives(shprefs))));
+                } else {
+                    ((TextView) findViewById(R.id.score_text3)).setText("");
+                    ((TextView) findViewById(R.id.lives_text3)).setText("");
+                }
+                if (Utils.hasPlayerName(this, 3)) {
+                    ((TextView) findViewById(R.id.score_text4)).setText(getScore(shprefs.getInt(Constants.SHPREFS_SCORE_PLAYER4, 0)));
+                    ((TextView) findViewById(R.id.lives_text4)).setText(String.valueOf(shprefs.getInt(Constants.SHPREFS_LIVES_PLAYER4, Utils.getDefaultLives(shprefs))));
+                } else {
+                    ((TextView) findViewById(R.id.score_text4)).setText("");
+                    ((TextView) findViewById(R.id.lives_text4)).setText("");
+                }
+
+                findViewById(R.id.singlePlayerBtn).setVisibility(View.VISIBLE);
+                findViewById(R.id.multiplayerBtn).setVisibility(View.INVISIBLE);
+            } else {
+                Log.e(TAG, "Unhandled game mode");
+            }
+        }
+    }
+
+
     /**
      * Returns string score or "no scores" string if score is 0.
      *
@@ -1118,7 +1258,7 @@ public class MainActivity extends MusicActivity {
                     }
                 }
             } else { // Landscape
-                for (int i = 0; i < iconIds.length; ++i) {
+                for (int i = 0; i < iconIds.length; i++) {
                     int id = nameIds[i];
                     if (mSelectedPlayer == id) {
                         if (Utils.hasPlayerName(this, i)) {
@@ -1179,12 +1319,20 @@ public class MainActivity extends MusicActivity {
                         editor.putString(Constants.SHPREFS_NAME_SINGLE_PLAYER, name); // Save name
                     } else if (gameMode == Constants.MULTIPLAYER) {
                         editor.putString(Constants.getPlayerNameStorageIds(isPortrait).get(mSelectedPlayer), name); // Save name
+
                     } else {
                         Log.e(TAG, "Unhandled game mode");
                     }
                     editor.apply();
                     editText.setText(""); // clear input
+
+
                     initScorecard(gameMode, isPortrait); // add empty score
+                    mSelectedPlayer=mSelectedPlayer+1;
+                    if(mSelectedPlayer > R.id.playerName4)
+                        mSelectedPlayer = R.id.playerName1;
+                    findViewById(mSelectedPlayer).setBackgroundResource(R.drawable.player_panel_selected);
+
                 } // else invalid name
                 break;
             case R.id.restartGameBtn:

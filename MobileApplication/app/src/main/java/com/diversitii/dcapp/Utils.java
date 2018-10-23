@@ -77,7 +77,11 @@ class Utils {
      * @return true if screen size indicates device is a phone, else false
      */
     static boolean isPortrait(Context context) {
-        return context.getResources().getBoolean(R.bool.is_portrait);
+        if(!isAndroidTV(context)) {
+            return context.getResources().getBoolean(R.bool.is_portrait);
+        }else{
+            return false;
+        }
     }
     static boolean isAndroidTV(Context context){
         boolean isAndroidTV;

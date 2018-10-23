@@ -352,7 +352,6 @@ public class Constants {
 
     private static final int[] PLAYER_ICON_IDS = new int[]{R.id.iv_player_icon1, R.id.iv_player_icon2, R.id.iv_player_icon3, R.id.iv_player_icon4};
     private static final int[] PLAYER_ICON_IDS_PORTRAIT = new int[]{R.id.iv_player_icon1, R.id.iv_player_icon2};
-
     static int[] getPlayerIconIds(boolean isPortrait) {
         return (isPortrait) ? PLAYER_ICON_IDS_PORTRAIT : PLAYER_ICON_IDS;
     }
